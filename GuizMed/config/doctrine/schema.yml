@@ -1,0 +1,33 @@
+PatientMedicijn:
+  actAs: { Timestampable: ~ }
+  columns:
+    patient_id:  { type: integer, notnull: true }
+    Medicijn_id: { type: integer, notnull: true }
+    aantal: { type: integer, notnull: true }
+
+Patient:
+  actAs: { Timestampable: ~ }
+  columns:
+    #category_id:  { type: integer, notnull: true }
+    Naam:            { type: string(255),notnull:true }
+    Voornaam:        { type: string(255), notnull: true }
+    Geslacht:        { type: boolean, notnull: true }
+    Geboortedatum:   { type: string(255) }
+    Medicatiescheme: { type: string(255) }
+    Opmerkingen:     { type: string(4000) }
+    Voorgeschiedenis:    { type: string(4000), notnull: true }
+  relations:
+    PatientMedicijn: { onDelete: CASCADE, local: id, foreign: patient_id, foreignAlias: PatientMedicijn }
+
+Medicijn:
+  actAs: { Timestampable: ~ }
+  columns:
+    Hoofdklasse:       { type: string(255), notnull: true }
+    Generische_Naam:     { type: string(255), notnull: true, unique: true }
+    Specialiteit:     { type: string(255), notnull: true }
+    Magistraat_Type: { type: string(255), notnull: true }
+    Type:     { type: string(255), notnull: true }
+    BNF_Percentage:  { type: integer, notnull: true }
+    BNF_Getal:  { type: integer, notnull: true }
+  relations:
+    PatientMedicijn: { onDelete: CASCADE, local: id, foreign: Medicijn_id, foreignAlias: PatientMedicijn }
