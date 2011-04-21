@@ -2,6 +2,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn: 'mysql:host=localhost;dbname=guizmed'
+      dsn: 'mysql:host=localhost;dbname=GuizMed'
       username: root
       password: null

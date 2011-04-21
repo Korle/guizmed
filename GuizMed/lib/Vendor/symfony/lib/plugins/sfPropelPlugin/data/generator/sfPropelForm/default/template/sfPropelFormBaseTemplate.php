@@ -3,9 +3,9 @@
 /**
  * Project form base class.
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage form
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  */
 abstract class BaseFormPropel extends sfFormPropel
 {

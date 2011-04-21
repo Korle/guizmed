@@ -3,9 +3,9 @@
 /**
  * <?php echo $this->table->getClassname() ?> form.
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage form
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  */
 class <?php echo $this->table->getClassname() ?>Form extends Base<?php echo $this->table->getClassname() ?>Form
 {

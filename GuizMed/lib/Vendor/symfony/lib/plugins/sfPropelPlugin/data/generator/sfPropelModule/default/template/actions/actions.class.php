@@ -3,9 +3,9 @@
 /**
  * <?php echo $this->getModuleName() ?> actions.
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage <?php echo $this->getModuleName()."\n" ?>
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  */
 class <?php echo $this->getGeneratedModuleName() ?>Actions extends <?php echo $this->getActionsBaseClass() ?>
 

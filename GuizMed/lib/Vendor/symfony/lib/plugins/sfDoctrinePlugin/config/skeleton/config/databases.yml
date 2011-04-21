@@ -5,6 +5,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=GuizMed
+      dsn:      mysql:host=localhost;dbname=##PROJECT_NAME##
       username: root
       password: 
