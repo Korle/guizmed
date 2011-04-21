@@ -5,9 +5,9 @@
  *
  * @method <?php echo $this->modelName ?> getObject() Returns the current form's model object
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage form
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  * @version    SVN: $Id: sfDoctrineFormGeneratedInheritanceTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class Base<?php echo $this->modelName ?>Form extends <?php echo $this->getFormClassToExtend().PHP_EOL ?>

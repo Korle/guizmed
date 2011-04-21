@@ -6,9 +6,9 @@ require_once(dirname(__FILE__).'/../lib/Base<?php echo ucfirst($this->moduleName
 /**
  * <?php echo $this->getModuleName() ?> actions.
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage <?php echo $this->getModuleName()."\n" ?>
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  */
 abstract class <?php echo $this->getGeneratedModuleName() ?>Actions extends <?php echo $this->getActionsBaseClass()."\n" ?>
 {

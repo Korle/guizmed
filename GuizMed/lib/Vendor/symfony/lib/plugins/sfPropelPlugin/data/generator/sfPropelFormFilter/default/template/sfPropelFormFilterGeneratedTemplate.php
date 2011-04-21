@@ -3,9 +3,9 @@
 /**
  * <?php echo $this->table->getClassname() ?> filter form base class.
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage filter
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  */
 abstract class Base<?php echo $this->table->getClassname() ?>FormFilter extends BaseFormFilterPropel
 {

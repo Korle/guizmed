@@ -1,33 +1,896 @@
-PatientMedicijn:
-  actAs: { Timestampable: ~ }
+AdFunction:
+  connection: doctrine
+  tableName: ad_function
   columns:
-    patient_id:  { type: integer, notnull: true }
-    Medicijn_id: { type: integer, notnull: true }
-    aantal: { type: integer, notnull: true }
-
-Patient:
-  actAs: { Timestampable: ~ }
-  columns:
-    #category_id:  { type: integer, notnull: true }
-    Naam:            { type: string(255),notnull:true }
-    Voornaam:        { type: string(255), notnull: true }
-    Geslacht:        { type: boolean, notnull: true }
-    Geboortedatum:   { type: string(255) }
-    Medicatiescheme: { type: string(255) }
-    Opmerkingen:     { type: string(4000) }
-    Voorgeschiedenis:    { type: string(4000), notnull: true }
+    function_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
   relations:
-    PatientMedicijn: { onDelete: CASCADE, local: id, foreign: patient_id, foreignAlias: PatientMedicijn }
-
-Medicijn:
-  actAs: { Timestampable: ~ }
+    AdUser:
+      local: function_id
+      foreign: ad_function_id
+      type: many
+AdLog:
+  connection: doctrine
+  tableName: ad_log
   columns:
-    Hoofdklasse:       { type: string(255), notnull: true }
-    Generische_Naam:     { type: string(255), notnull: true, unique: true }
-    Specialiteit:     { type: string(255), notnull: true }
-    Magistraat_Type: { type: string(255), notnull: true }
-    Type:     { type: string(255), notnull: true }
-    BNF_Percentage:  { type: integer, notnull: true }
-    BNF_Getal:  { type: integer, notnull: true }
+    ad_log:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    action:
+      type: string(150)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ad_user_patient_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    date:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
   relations:
-    PatientMedicijn: { onDelete: CASCADE, local: id, foreign: Medicijn_id, foreignAlias: PatientMedicijn }
+    AdUserPatient:
+      local: ad_user_patient_id
+      foreign: user_patient_id
+      type: one
+AdPatient:
+  connection: doctrine
+  tableName: ad_patient
+  columns:
+    patient_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    fname:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lname:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    bdate:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    patient_since:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    sex:
+      type: enum(1)
+      fixed: false
+      unsigned: false
+      values:
+        - M
+        - F
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    AdUserPatient:
+      local: patient_id
+      foreign: patient_id
+      type: many
+AdPrescription:
+  connection: doctrine
+  tableName: ad_prescription
+  columns:
+    ad_presc_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    start_date:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    end_date:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    presc_date:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    dose:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    frequency:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_patient_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    comment:
+      type: blob()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    AdUserPatient:
+      local: user_patient_id
+      foreign: user_patient_id
+      type: one
+    MedForm:
+      local: med_form_id
+      foreign: med_form_id
+      type: one
+AdRole:
+  connection: doctrine
+  tableName: ad_role
+  columns:
+    role_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    AdUser:
+      local: role_id
+      foreign: ad_role_id
+      type: many
+AdUser:
+  connection: doctrine
+  tableName: ad_user
+  columns:
+    user_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    fname:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lname:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    email:
+      type: string(80)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    uname:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    passw:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    phone:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ad_role_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    ad_function_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    unlock_code:
+      type: string(50)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    AdRole:
+      local: ad_role_id
+      foreign: role_id
+      type: one
+    AdFunction:
+      local: ad_function_id
+      foreign: function_id
+      type: one
+    AdUserPatient:
+      local: user_id
+      foreign: user_id
+      type: many
+    AdUserPatient_3:
+      class: AdUserPatient
+      local: user_id
+      foreign: prev_user_id
+      type: many
+AdUserPatient:
+  connection: doctrine
+  tableName: ad_user_patient
+  columns:
+    user_patient_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    patient_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    user_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    prev_user_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    AdPatient:
+      local: patient_id
+      foreign: patient_id
+      type: one
+    AdUser:
+      local: user_id
+      foreign: user_id
+      type: one
+    AdUser_3:
+      class: AdUser
+      local: prev_user_id
+      foreign: user_id
+      type: one
+    AdLog:
+      local: user_patient_id
+      foreign: ad_user_patient_id
+      type: many
+    AdPrescription:
+      local: user_patient_id
+      foreign: user_patient_id
+      type: many
+IntEnzym:
+  connection: doctrine
+  tableName: int_enzym
+  columns:
+    int_enzym_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    int_enzym_id_minor:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    int_enzym_type_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    IntEnzym:
+      local: int_enzym_id
+      foreign: int_enzym_id_minor
+      type: many
+    IntEnzymType:
+      local: int_enzym_type_id
+      foreign: med_enzym_types_id
+      type: one
+    IntInteraction:
+      local: int_enzym_id
+      foreign: int_enzym_id
+      type: many
+IntEnzymGroup:
+  connection: doctrine
+  tableName: int_enzym_group
+  columns:
+    enzym_group_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    extra:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    IntInteraction:
+      local: enzym_group_id
+      foreign: enzym_group_id
+      type: many
+IntEnzymType:
+  connection: doctrine
+  tableName: int_enzym_type
+  columns:
+    med_enzym_types_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    IntEnzym:
+      local: med_enzym_types_id
+      foreign: int_enzym_type_id
+      type: many
+IntInteraction:
+  connection: doctrine
+  tableName: int_interaction
+  columns:
+    int_interaction_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    med_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    enzym_group_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    interaction_type:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    int_enzym_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedForm:
+      local: med_form_id
+      foreign: med_form_id
+      type: one
+    IntEnzymGroup:
+      local: enzym_group_id
+      foreign: enzym_group_id
+      type: one
+    IntEnzym:
+      local: int_enzym_id
+      foreign: int_enzym_id
+      type: one
+MedBaseId:
+  connection: doctrine
+  tableName: med_base_id
+  columns:
+    med_base_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    mainclass:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    gen_name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    speciality:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_type_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedType:
+      local: med_type_id
+      foreign: med_type_id
+      type: one
+    MedForm:
+      local: med_base_id
+      foreign: med_base_id
+      type: many
+MedBnfMedicine:
+  connection: doctrine
+  tableName: med_bnf_medicine
+  columns:
+    med_bnf_medicine_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    med_bnf_percentages_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    value:
+      type: float()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedBnfPercentage:
+      local: med_bnf_percentages_id
+      foreign: med_bnf_percentage_id
+      type: one
+    MedForm:
+      local: med_form_id
+      foreign: med_form_id
+      type: one
+MedBnfPercentage:
+  connection: doctrine
+  tableName: med_bnf_percentage
+  columns:
+    med_bnf_percentage_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    percentage:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedBnfMedicine:
+      local: med_bnf_percentage_id
+      foreign: med_bnf_percentages_id
+      type: many
+MedChemBonding:
+  connection: doctrine
+  tableName: med_chem_bonding
+  columns:
+    med_chem_bonding_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    MedFormBonding:
+      local: med_chem_bonding_id
+      foreign: med_chem_bonding_id
+      type: many
+MedForm:
+  connection: doctrine
+  tableName: med_form
+  columns:
+    med_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    med_base_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_magister_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    dose:
+      type: string(55)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    bioavailability:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    proteine_binding:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    t_max_h:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    hlf:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    ddd:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    MedBaseId:
+      local: med_base_id
+      foreign: med_base_id
+      type: one
+    MedMagisterForm:
+      local: med_magister_form_id
+      foreign: med_magister_form_id
+      type: one
+    AdPrescription:
+      local: med_form_id
+      foreign: med_form_id
+      type: many
+    IntInteraction:
+      local: med_form_id
+      foreign: med_form_id
+      type: many
+    MedBnfMedicine:
+      local: med_form_id
+      foreign: med_form_id
+      type: many
+    MedFormBonding:
+      local: med_form_id
+      foreign: med_form_id
+      type: many
+MedFormBonding:
+  connection: doctrine
+  tableName: med_form_bonding
+  columns:
+    med_form_bonding_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    med_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_chem_bonding_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_ki_val_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedForm:
+      local: med_form_id
+      foreign: med_form_id
+      type: one
+    MedChemBonding:
+      local: med_chem_bonding_id
+      foreign: med_chem_bonding_id
+      type: one
+    MedKiVal:
+      local: med_ki_val_id
+      foreign: med_ki_val_id
+      type: one
+MedKiVal:
+  connection: doctrine
+  tableName: med_ki_val
+  columns:
+    med_ki_val_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    value:
+      type: string(15)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    influence:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    tagval:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedFormBonding:
+      local: med_ki_val_id
+      foreign: med_ki_val_id
+      type: many
+MedMagisterForm:
+  connection: doctrine
+  tableName: med_magister_form
+  columns:
+    med_magister_form_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    naam:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedForm:
+      local: med_magister_form_id
+      foreign: med_magister_form_id
+      type: many
+MedSubtype1:
+  connection: doctrine
+  tableName: med_subtype1
+  columns:
+    med_subtype1_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedType:
+      local: med_subtype1_id
+      foreign: med_subtype1_id
+      type: many
+MedSubtype2:
+  connection: doctrine
+  tableName: med_subtype2
+  columns:
+    med_subtype2_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(45)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedType:
+      local: med_subtype2_id
+      foreign: med_subtype2_id
+      type: many
+MedType:
+  connection: doctrine
+  tableName: med_type
+  columns:
+    med_type_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    med_subtype1_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    med_subtype2_id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    MedSubtype1:
+      local: med_subtype1_id
+      foreign: med_subtype1_id
+      type: one
+    MedSubtype2:
+      local: med_subtype2_id
+      foreign: med_subtype2_id
+      type: one
+    MedBaseId:
+      local: med_type_id
+      foreign: med_type_id
+      type: many

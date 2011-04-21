@@ -3,9 +3,9 @@
 /**
  * <?php echo $this->getModuleName() ?> module configuration.
  *
- * @package    GuizMed
+ * @package    ##PROJECT_NAME##
  * @subpackage <?php echo $this->getModuleName()."\n" ?>
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  * @version    SVN: $Id: helper.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
  */
 abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper extends sfModelGeneratorHelper
