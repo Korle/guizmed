@@ -620,3 +620,33 @@ Apr 21 11:17:31 symfony [info] {sfWebDebugLogger} Action "patienten/index" 140.4
 Apr 21 11:17:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
 Apr 21 11:17:31 symfony [info] {sfWebDebugLogger} View "Success" for "patienten/index" 78.35 ms (1)
 Apr 21 11:17:31 symfony [info] {sfWebResponse} Send content (31575 o)
+Apr 21 11:45:52 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+Apr 21 11:45:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 21 11:45:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 21 11:45:53 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+Apr 21 11:45:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 21 11:45:53 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a - ()
+Apr 21 11:45:53 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42S02]: Base table or view not found: 1146 Table 'guizmed.ad_patient' doesn't exist. Failing Query: "SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a"
+Apr 21 11:45:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 21 11:45:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 21 11:45:53 symfony [info] {sfWebDebugLogger} Configuration 10.06 ms (8)
+Apr 21 11:45:53 symfony [info] {sfWebDebugLogger} Factories 587.59 ms (1)
+Apr 21 11:45:53 symfony [info] {sfWebDebugLogger} Action "patienten/index" 285.69 ms (1)
+Apr 21 11:45:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (1)
+Apr 21 11:50:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /patienten with parameters array (  'module' => 'patienten',  'action' => 'index',)
+Apr 21 11:50:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 21 11:50:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 21 11:50:49 symfony [info] {patientenActions} Call "patientenActions->executeIndex()"
+Apr 21 11:50:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 21 11:50:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.patient_id AS a__patient_id, a.fname AS a__fname, a.lname AS a__lname, a.bdate AS a__bdate, a.patient_since AS a__patient_since, a.sex AS a__sex FROM ad_patient a - ()
+Apr 21 11:50:49 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/patienten/templates/indexSuccess.php"
+Apr 21 11:50:50 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\guizmed\GuizMed\apps\backend\templates/layout.php"
+Apr 21 11:50:50 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\templates/layout.php"
+Apr 21 11:50:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 21 11:50:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 21 11:50:50 symfony [info] {sfWebDebugLogger} Configuration 10.99 ms (9)
+Apr 21 11:50:50 symfony [info] {sfWebDebugLogger} Factories 47.57 ms (1)
+Apr 21 11:50:50 symfony [info] {sfWebDebugLogger} Action "patienten/index" 530.38 ms (1)
+Apr 21 11:50:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 21 11:50:50 symfony [info] {sfWebDebugLogger} View "Success" for "patienten/index" 414.03 ms (1)
+Apr 21 11:50:50 symfony [info] {sfWebResponse} Send content (31971 o)
