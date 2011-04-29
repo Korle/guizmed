@@ -13,25 +13,25 @@ abstract class BaseMedicijnFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'Hoofdklasse'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'Generische_Naam' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'Specialiteit'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'Magistraat_Type' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'Type'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'BNF_Percentage'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'BNF_Getal'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'hoofdklasse'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'generische_naam' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'specialiteit'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'magistraat_type' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'type'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'bnf_percentage'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'bnf_getal'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'      => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'Hoofdklasse'     => new sfValidatorPass(array('required' => false)),
-      'Generische_Naam' => new sfValidatorPass(array('required' => false)),
-      'Specialiteit'    => new sfValidatorPass(array('required' => false)),
-      'Magistraat_Type' => new sfValidatorPass(array('required' => false)),
-      'Type'            => new sfValidatorPass(array('required' => false)),
-      'BNF_Percentage'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'BNF_Getal'       => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'hoofdklasse'     => new sfValidatorPass(array('required' => false)),
+      'generische_naam' => new sfValidatorPass(array('required' => false)),
+      'specialiteit'    => new sfValidatorPass(array('required' => false)),
+      'magistraat_type' => new sfValidatorPass(array('required' => false)),
+      'type'            => new sfValidatorPass(array('required' => false)),
+      'bnf_percentage'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'bnf_getal'       => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'created_at'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'      => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -54,13 +54,13 @@ abstract class BaseMedicijnFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'              => 'Number',
-      'Hoofdklasse'     => 'Text',
-      'Generische_Naam' => 'Text',
-      'Specialiteit'    => 'Text',
-      'Magistraat_Type' => 'Text',
-      'Type'            => 'Text',
-      'BNF_Percentage'  => 'Number',
-      'BNF_Getal'       => 'Number',
+      'hoofdklasse'     => 'Text',
+      'generische_naam' => 'Text',
+      'specialiteit'    => 'Text',
+      'magistraat_type' => 'Text',
+      'type'            => 'Text',
+      'bnf_percentage'  => 'Number',
+      'bnf_getal'       => 'Number',
       'created_at'      => 'Date',
       'updated_at'      => 'Date',
     );

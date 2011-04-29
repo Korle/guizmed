@@ -1,0 +1,8 @@
+# data/fixtures/med_subtype1.yml
+MedSubtype1:
+  Klassiek:
+    med_subtype1_id: 0001
+    name: Klassiek
+  Atypisch:
+    med_subtype1_id: 0002
+    name: Atypisch

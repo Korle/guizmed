@@ -17,7 +17,7 @@ abstract class BaseMedFormForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'med_form_id'          => new sfWidgetFormInputHidden(),
       'med_base_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedBaseId'), 'add_empty' => false)),
-      'med_magister_form_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedMagisterForm'), 'add_empty' => false)),
+      'med_magister_form_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedMagisterForm'), 'add_empty' => true)),
       'dose'                 => new sfWidgetFormInputText(),
       'bioavailability'      => new sfWidgetFormInputText(),
       'proteine_binding'     => new sfWidgetFormInputText(),
@@ -29,7 +29,7 @@ abstract class BaseMedFormForm extends BaseFormDoctrine
     $this->setValidators(array(
       'med_form_id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('med_form_id')), 'empty_value' => $this->getObject()->get('med_form_id'), 'required' => false)),
       'med_base_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('MedBaseId'))),
-      'med_magister_form_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('MedMagisterForm'))),
+      'med_magister_form_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('MedMagisterForm'), 'required' => false)),
       'dose'                 => new sfValidatorString(array('max_length' => 55, 'required' => false)),
       'bioavailability'      => new sfValidatorString(array('max_length' => 45, 'required' => false)),
       'proteine_binding'     => new sfValidatorString(array('max_length' => 45, 'required' => false)),

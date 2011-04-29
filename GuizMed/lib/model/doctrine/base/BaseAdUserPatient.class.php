@@ -91,11 +91,11 @@ abstract class BaseAdUserPatient extends sfDoctrineRecord
              'foreign' => 'patient_id'));
 
         $this->hasOne('AdUser', array(
-             'local' => 'user_id',
+             'local' => 'prev_user_id',
              'foreign' => 'user_id'));
 
         $this->hasOne('AdUser as AdUser_3', array(
-             'local' => 'prev_user_id',
+             'local' => 'user_id',
              'foreign' => 'user_id'));
 
         $this->hasMany('AdLog', array(

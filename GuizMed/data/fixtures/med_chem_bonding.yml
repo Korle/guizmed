@@ -1,0 +1,35 @@
+# data/fixtures/med_chem_bonding.yml
+MedChemBonding:
+  med_chem_bonding1:
+     med_chem_bonding_id: 1
+     name: Dopamine D1
+  med_chem_bonding2:
+     med_chem_bonding_id: 2
+     name: Dopamine D2
+  med_chem_bonding3:
+     med_chem_bonding_id: 3
+     name: Dopamine D3
+  med_chem_bonding4:
+     med_chem_bonding_id: 4
+     name: Dopamine D4
+  med_chem_bonding5:
+     med_chem_bonding_id: 5
+     name: Dopamine D5
+  med_chem_bonding6:
+     med_chem_bonding_id: 6
+     name: Histamine H1
+  med_chem_bonding7:
+     med_chem_bonding_id: 7
+     name: Muscarine ACh
+  med_chem_bonding8:
+     med_chem_bonding_id: 8
+     name: Alfa1
+  med_chem_bonding9:
+     med_chem_bonding_id: 9
+     name: Alfa2
+  med_chem_bonding10:
+     med_chem_bonding_id: 10
+     name: Serotonine 5HT2A
+  med_chem_bonding11:
+     med_chem_bonding_id: 11
+     name: Serotonine 5HT2C

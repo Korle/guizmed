@@ -1,0 +1,35 @@
+# data\fixtures\ad_user.yml
+AdUser:
+  User_1:
+     user_id: 0001
+     fname: Willem
+     lname: Janssens
+     email: willem.janssens@howest.be
+     uname: willem.janssens
+     passw: s2@#dfdz
+     phone: 0474865035
+     ad_role_id: 0002
+     ad_function_id: 0002
+     unlock_code: 2354
+  User_2:
+     user_id: 0002
+     fname: Kim
+     lname: Boussy
+     email: Kim.Boussy@howest.be
+     uname: Kim.Boussy
+     passw: s2@#dfdz
+     phone: 0474865035
+     ad_role_id: 0002
+     ad_function_id: 0002
+     unlock_code: 2354
+  User_3:
+     user_id: 0003
+     fname: Dieter
+     lname: Vermeersch
+     email: Dieter.Vermeersch@howest.be
+     uname: Dieter.Vermeersch
+     passw: s2@#dfdz
+     phone: 0474865035
+     ad_role_id: 0001
+     ad_function_id: 0001
+     unlock_code: 2354

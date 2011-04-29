@@ -1,0 +1,8 @@
+# data\fixtures\ad_function.yml
+AdFunction: 
+  Administrator: 
+    function_id: 0001
+    name: chief physician
+  User:
+    function_id: 0002
+    name: psychiatrist

@@ -1,0 +1,22 @@
+# data\fixtures\ad_user_patient.yml
+AdUserPatient:
+ UserPatient_1:	
+   user_patient_id:   	0001
+   patient_id:		0001
+   user_id:		0001
+   prev_user_id:		0002
+ UserPatient_2:	
+   user_patient_id:   	0002
+   patient_id:		0002
+   user_id:		0002
+   prev_user_id:		0001
+ UserPatient_3:	
+   user_patient_id:   	0003
+   patient_id:		0003
+   user_id:		0003
+   prev_user_id:		0002
+ UserPatient_4:	
+   user_patient_id:   	0004
+   patient_id:		0004
+   user_id:		0003
+   prev_user_id:		0002

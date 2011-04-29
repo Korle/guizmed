@@ -1,0 +1,8 @@
+# data\fixtures\ad_role.yml
+AdRole: 
+  Role_1:
+    role_id: 0001
+    name: Administrator 
+  Role_2:
+    role_id: 0002
+    name: User

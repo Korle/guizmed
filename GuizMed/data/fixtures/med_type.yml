@@ -1,0 +1,26 @@
+# data/fixtures/med_type.yml
+MedType:
+ medtype1:
+   med_type_id: 0001
+   med_subtype1_id: 0001
+   med_subtype2_id: 0001
+ medtype2:
+   med_type_id: 0002
+   med_subtype1_id: 0001
+   med_subtype2_id: 0002
+ medtype3:
+   med_type_id: 0003
+   med_subtype1_id: 0001
+   med_subtype2_id: 0003
+ medtype4:
+   med_type_id: 0004
+   med_subtype1_id: 0002
+   med_subtype2_id: 0001
+ medtype5:
+   med_type_id: 0005
+   med_subtype1_id: 0002
+   med_subtype2_id: 0002
+ medtype6:
+   med_type_id: 0006
+   med_subtype1_id: 0002
+   med_subtype2_id: 0003

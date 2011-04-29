@@ -1,0 +1,11 @@
+# data/fixtures/med_subtype2.yml
+MedSubtype2:
+  FGA:
+    med_subtype2_id: 0001
+    name: FGA
+  TGA:
+    med_subtype2_id: 0002
+    name: TGA
+  SGA:
+    med_subtype2_id: 0003
+    name: SGA

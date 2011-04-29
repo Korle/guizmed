@@ -95,12 +95,9 @@ AdPatient:
       notnull: true
       autoincrement: false
     sex:
-      type: enum(1)
+      type: string(1)
       fixed: false
       unsigned: false
-      values:
-        - M
-        - F
       primary: false
       notnull: true
       autoincrement: false
@@ -176,13 +173,13 @@ AdPrescription:
       notnull: false
       autoincrement: false
   relations:
-    AdUserPatient:
-      local: user_patient_id
-      foreign: user_patient_id
-      type: one
     MedForm:
       local: med_form_id
       foreign: med_form_id
+      type: one
+    AdUserPatient:
+      local: user_patient_id
+      foreign: user_patient_id
       type: one
 AdRole:
   connection: doctrine
@@ -280,22 +277,22 @@ AdUser:
       notnull: false
       autoincrement: false
   relations:
-    AdRole:
-      local: ad_role_id
-      foreign: role_id
-      type: one
     AdFunction:
       local: ad_function_id
       foreign: function_id
       type: one
+    AdRole:
+      local: ad_role_id
+      foreign: role_id
+      type: one
     AdUserPatient:
       local: user_id
-      foreign: user_id
+      foreign: prev_user_id
       type: many
     AdUserPatient_3:
       class: AdUserPatient
       local: user_id
-      foreign: prev_user_id
+      foreign: user_id
       type: many
 AdUserPatient:
   connection: doctrine
@@ -334,12 +331,12 @@ AdUserPatient:
       foreign: patient_id
       type: one
     AdUser:
-      local: user_id
+      local: prev_user_id
       foreign: user_id
       type: one
     AdUser_3:
       class: AdUser
-      local: prev_user_id
+      local: user_id
       foreign: user_id
       type: one
     AdLog:
@@ -375,10 +372,6 @@ IntEnzym:
       notnull: true
       autoincrement: false
   relations:
-    IntEnzym:
-      local: int_enzym_id
-      foreign: int_enzym_id_minor
-      type: many
     IntEnzymType:
       local: int_enzym_type_id
       foreign: med_enzym_types_id
@@ -477,10 +470,6 @@ IntInteraction:
       notnull: true
       autoincrement: false
   relations:
-    MedForm:
-      local: med_form_id
-      foreign: med_form_id
-      type: one
     IntEnzymGroup:
       local: enzym_group_id
       foreign: enzym_group_id
@@ -488,6 +477,10 @@ IntInteraction:
     IntEnzym:
       local: int_enzym_id
       foreign: int_enzym_id
+      type: one
+    MedForm:
+      local: med_form_id
+      foreign: med_form_id
       type: one
 MedBaseId:
   connection: doctrine
@@ -561,20 +554,20 @@ MedBnfMedicine:
       notnull: true
       autoincrement: false
     value:
-      type: float()
+      type: float(18)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
   relations:
-    MedBnfPercentage:
-      local: med_bnf_percentages_id
-      foreign: med_bnf_percentage_id
-      type: one
     MedForm:
       local: med_form_id
       foreign: med_form_id
+      type: one
+    MedBnfPercentage:
+      local: med_bnf_percentages_id
+      foreign: med_bnf_percentage_id
       type: one
 MedBnfPercentage:
   connection: doctrine
@@ -642,7 +635,7 @@ MedForm:
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
+      notnull: false
       autoincrement: false
     dose:
       type: string(55)
@@ -747,13 +740,13 @@ MedFormBonding:
       local: med_form_id
       foreign: med_form_id
       type: one
-    MedChemBonding:
-      local: med_chem_bonding_id
-      foreign: med_chem_bonding_id
-      type: one
     MedKiVal:
       local: med_ki_val_id
       foreign: med_ki_val_id
+      type: one
+    MedChemBonding:
+      local: med_chem_bonding_id
+      foreign: med_chem_bonding_id
       type: one
 MedKiVal:
   connection: doctrine
@@ -894,3 +887,194 @@ MedType:
       local: med_type_id
       foreign: med_type_id
       type: many
+Medicijn:
+  connection: doctrine
+  tableName: medicijn
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    hoofdklasse:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    generische_naam:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    specialiteit:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    magistraat_type:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    type:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    bnf_percentage:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    bnf_getal:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+Patient:
+  connection: doctrine
+  tableName: patient
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    naam:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    voornaam:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    geslacht:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    geboortedatum:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    medicatiescheme:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    opmerkingen:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    voorgeschiedenis:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+PatientMedicijn:
+  connection: doctrine
+  tableName: patient_medicijn
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    patient_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    medicijn_id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    aantal:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false

@@ -12,26 +12,26 @@ Doctrine_Manager::getInstance()->bindComponent('IntInteraction', 'doctrine');
  * @property integer $enzym_group_id
  * @property integer $interaction_type
  * @property integer $int_enzym_id
- * @property MedForm $MedForm
  * @property IntEnzymGroup $IntEnzymGroup
  * @property IntEnzym $IntEnzym
+ * @property MedForm $MedForm
  * 
  * @method integer        getIntInteractionId()   Returns the current record's "int_interaction_id" value
  * @method integer        getMedFormId()          Returns the current record's "med_form_id" value
  * @method integer        getEnzymGroupId()       Returns the current record's "enzym_group_id" value
  * @method integer        getInteractionType()    Returns the current record's "interaction_type" value
  * @method integer        getIntEnzymId()         Returns the current record's "int_enzym_id" value
- * @method MedForm        getMedForm()            Returns the current record's "MedForm" value
  * @method IntEnzymGroup  getIntEnzymGroup()      Returns the current record's "IntEnzymGroup" value
  * @method IntEnzym       getIntEnzym()           Returns the current record's "IntEnzym" value
+ * @method MedForm        getMedForm()            Returns the current record's "MedForm" value
  * @method IntInteraction setIntInteractionId()   Sets the current record's "int_interaction_id" value
  * @method IntInteraction setMedFormId()          Sets the current record's "med_form_id" value
  * @method IntInteraction setEnzymGroupId()       Sets the current record's "enzym_group_id" value
  * @method IntInteraction setInteractionType()    Sets the current record's "interaction_type" value
  * @method IntInteraction setIntEnzymId()         Sets the current record's "int_enzym_id" value
- * @method IntInteraction setMedForm()            Sets the current record's "MedForm" value
  * @method IntInteraction setIntEnzymGroup()      Sets the current record's "IntEnzymGroup" value
  * @method IntInteraction setIntEnzym()           Sets the current record's "IntEnzym" value
+ * @method IntInteraction setMedForm()            Sets the current record's "MedForm" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -92,10 +92,6 @@ abstract class BaseIntInteraction extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('MedForm', array(
-             'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
-
         $this->hasOne('IntEnzymGroup', array(
              'local' => 'enzym_group_id',
              'foreign' => 'enzym_group_id'));
@@ -103,5 +99,9 @@ abstract class BaseIntInteraction extends sfDoctrineRecord
         $this->hasOne('IntEnzym', array(
              'local' => 'int_enzym_id',
              'foreign' => 'int_enzym_id'));
+
+        $this->hasOne('MedForm', array(
+             'local' => 'med_form_id',
+             'foreign' => 'med_form_id'));
     }
 }

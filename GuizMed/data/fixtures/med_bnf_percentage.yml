@@ -1,0 +1,89 @@
+# data/fixtures/med_bnf_percentage.yml
+MedBnfPercentage:
+   med_bnf_percentage1:
+    med_bnf_percentage_id: 1
+    percentage: 5
+   med_bnf_percentage2:
+    med_bnf_percentage_id: 2
+    percentage: 10
+   med_bnf_percentage3:
+    med_bnf_percentage_id: 3
+    percentage: 12.5
+   med_bnf_percentage4:
+    med_bnf_percentage_id: 4
+    percentage: 13
+   med_bnf_percentage5:
+    med_bnf_percentage_id: 5
+    percentage: 15
+   med_bnf_percentage6:
+    med_bnf_percentage_id: 6
+    percentage: 17
+   med_bnf_percentage7:
+    med_bnf_percentage_id: 7
+    percentage: 20
+   med_bnf_percentage8:
+    med_bnf_percentage_id: 8
+    percentage: 25
+   med_bnf_percentage9:
+    med_bnf_percentage_id: 9
+    percentage: 30
+   med_bnf_percentage10:
+    med_bnf_percentage_id: 10
+    percentage: 33
+   med_bnf_percentage11:
+    med_bnf_percentage_id: 11
+    percentage: 37.5
+   med_bnf_percentage12:
+    med_bnf_percentage_id: 12
+    percentage: 40
+   med_bnf_percentage13:
+    med_bnf_percentage_id: 13
+    percentage: 44
+   med_bnf_percentage14:
+    med_bnf_percentage_id: 14
+    percentage: 45
+   med_bnf_percentage15:
+    med_bnf_percentage_id: 15
+    percentage: 50
+   med_bnf_percentage16:
+    med_bnf_percentage_id: 16
+    percentage: 55
+   med_bnf_percentage17:
+    med_bnf_percentage_id: 17
+    percentage: 56.5
+   med_bnf_percentage18:
+    med_bnf_percentage_id: 18
+    percentage: 57
+   med_bnf_percentage19:
+    med_bnf_percentage_id: 19
+    percentage: 60
+   med_bnf_percentage20:
+    med_bnf_percentage_id: 20
+    percentage: 65
+   med_bnf_percentage21:
+    med_bnf_percentage_id: 21
+    percentage: 70
+   med_bnf_percentage22:
+    med_bnf_percentage_id: 22
+    percentage: 75
+   med_bnf_percentage23:
+    med_bnf_percentage_id: 23
+    percentage: 80
+   med_bnf_percentage24:
+    med_bnf_percentage_id: 24
+    percentage: 83
+   med_bnf_percentage25:
+    med_bnf_percentage_id: 25
+    percentage: 84
+   med_bnf_percentage26:
+    med_bnf_percentage_id: 26
+    percentage: 85
+   med_bnf_percentage27:
+    med_bnf_percentage_id: 27
+    percentage: 90
+   med_bnf_percentage28:
+    med_bnf_percentage_id: 28
+    percentage: 95
+   med_bnf_percentage29:
+    med_bnf_percentage_id: 29
+    percentage: 100

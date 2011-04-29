@@ -17,15 +17,15 @@ abstract class BaseAdUserPatientForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'user_patient_id' => new sfWidgetFormInputHidden(),
       'patient_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'), 'add_empty' => false)),
-      'user_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'add_empty' => false)),
-      'prev_user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'add_empty' => true)),
+      'user_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'add_empty' => false)),
+      'prev_user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
       'user_patient_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('user_patient_id')), 'empty_value' => $this->getObject()->get('user_patient_id'), 'required' => false)),
       'patient_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdPatient'))),
-      'user_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'))),
-      'prev_user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'), 'required' => false)),
+      'user_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser_3'))),
+      'prev_user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUser'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('ad_user_patient[%s]');

@@ -1,0 +1,20 @@
+# data/fixtures/med_magister_form.yml
+MedMagisterForm:
+  med_magister_form1:
+    med_magister_form_id: 0001
+    naam: Comprime
+  med_magister_form2:
+    med_magister_form_id: 0002
+    naam: Druppels
+  med_magister_form3:
+    med_magister_form_id: 0003
+    naam: Amp. IM acutard
+  med_magister_form4:
+    med_magister_form_id: 0004
+    naam: Amp LA
+  med_magister_form5:
+    med_magister_form_id: 0005
+    naam: Amp. IM-IV
+  med_magister_form6:
+    med_magister_form_id: 0006
+    naam: flacon

@@ -1,0 +1,30 @@
+# data\fixtures\ad_patient.yml
+AdPatient: 
+  patient_1: 
+    patient_id:		0001
+    fname:		Olivier	 
+    lname:		Jansens
+    bdate:		'1989-11-07'
+    patient_since:	'2010-02-03'
+    sex:			M
+  patient_2: 
+    patient_id:		0002
+    fname:		Henry 
+    lname:		Houdmont
+    bdate:		'1822/12/25'
+    patient_since:	'1950/02/23'
+    sex:			M
+  patient_3: 
+    patient_id:		0003
+    fname:		Karel 
+    lname:		Debruyne
+    bdate:		'1922/10/15'
+    patient_since:	'1951/03/13'
+    sex:			M
+  patient_4: 
+    patient_id:		0004
+    fname:		Joris 
+    lname:		Van der schoot
+    bdate:		'1922/10/15'
+    patient_since:	'1951/03/13'
+    sex:			M

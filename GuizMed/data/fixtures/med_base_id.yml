@@ -1,0 +1,158 @@
+# data/fixtures/med_base_id.yml
+MedBaseId:
+  med_base_id1:
+    med_base_id: 1
+    mainclass: Fenothiazines Alifatisch
+    gen_name: protipendyl
+    speciality: DOMINAL
+    med_type_id: 1
+  med_base_id2:
+    med_base_id: 2
+    mainclass: Fenothiazines Alifatisch
+    gen_name: levomepromazine
+    speciality: NOZINAN
+    med_type_id: 1
+  med_base_id3:
+    med_base_id: 3
+    mainclass: Thioxanthenen
+    gen_name: zuclopenthixol
+    speciality: CLOPIXOL
+    med_type_id: 1
+  med_base_id4:
+    med_base_id: 4
+    mainclass: Thioxanthenen
+    gen_name: flupentixol+melitraceen
+    speciality: DEANXIT
+    med_type_id: 1
+  med_base_id5:
+    med_base_id: 5
+    mainclass: Thioxanthenen
+    gen_name: flupentixol
+    speciality: FLUANXOL
+    med_type_id: 1
+  med_base_id6:
+    med_base_id: 6
+    mainclass: Dibenzoazepines
+    gen_name: Clothiapine
+    speciality: ETUMINE
+    med_type_id: 1
+  med_base_id7:
+    med_base_id: 7
+    mainclass: Butyrofenonen
+    gen_name: melperon
+    speciality: BURONIL
+    med_type_id: 1
+  med_base_id8:
+    med_base_id: 8
+    mainclass: Butyrofenonen
+    gen_name: pipamperon
+    speciality: DIPIPERON
+    med_type_id: 1
+  med_base_id9:
+    med_base_id: 9
+    mainclass: Butyrofenonen
+    gen_name: benperidol
+    speciality: FRENACTIL
+    med_type_id: 1
+  med_base_id10:
+    med_base_id: 10
+    mainclass: Butyrofenonen
+    gen_name: haloperidol
+    speciality: HALDOL
+    med_type_id: 1
+  med_base_id11:
+    med_base_id: 11
+    mainclass: Butyrofenonen
+    gen_name: bromperidol
+    speciality: IMPROMEN
+    med_type_id: 1
+  med_base_id12:
+    med_base_id: 12
+    mainclass: Difenylbutylpiperidines
+    gen_name: fluspirileen
+    speciality: IMAP
+    med_type_id: 1
+  med_base_id13:
+    med_base_id: 13
+    mainclass: Difenylbutylpiperidines
+    gen_name: pimozide
+    speciality: ORAP
+    med_type_id: 1
+  med_base_id14:
+    med_base_id: 14
+    mainclass: Difenylbutylpiperidines
+    gen_name: penfluridol
+    speciality: SEMAP
+    med_type_id: 1
+  med_base_id15:
+    med_base_id: 15
+    mainclass: Butyrofenonen
+    gen_name: droperidol
+    speciality: DIHYDROBENZPERIDOL
+    med_type_id: 1
+  med_base_id16:
+    med_base_id: 16
+    mainclass: Benzamiden
+    gen_name: amisulpride
+    speciality: SOLIAN
+    med_type_id: 6
+  med_base_id17:
+    med_base_id: 17
+    mainclass: Benzamiden
+    gen_name: sulpiride
+    speciality: DOGMATIL
+    med_type_id: 1
+  med_base_id18:
+    med_base_id: 18
+    mainclass: Benzamiden
+    gen_name: tiapride
+    speciality: TIAPRIDAL
+    med_type_id: 1
+  med_base_id19:
+    med_base_id: 19
+    mainclass: Azolderivaten
+    gen_name: aripiprazol
+    speciality: ABILIFY
+    med_type_id: 5
+  med_base_id20:
+    med_base_id: 20
+    mainclass: Dibenzoazepines
+    gen_name: clozapine
+    speciality: LEPONEX
+    med_type_id: 6
+  med_base_id21:
+    med_base_id: 21
+    mainclass: Tienobenzodiazepine
+    gen_name: olanzapine
+    speciality: ZYPREXA
+    med_type_id: 6
+  med_base_id22:
+    med_base_id: 22
+    mainclass: Dibenzothiazepine
+    gen_name: quetiapine
+    speciality: SEROQUEL
+    med_type_id: 6
+  med_base_id23:
+    med_base_id: 23
+    mainclass: Benzisoxazole
+    gen_name: risperidon
+    speciality: RISPERDAL
+    med_type_id: 6
+  med_base_id24:
+    med_base_id: 24
+    mainclass: Azolderivaten
+    gen_name: sertindol
+    speciality: SERDOLECT
+    med_type_id: 6
+  med_base_id25:
+    med_base_id: 25
+    mainclass: Benzisoxazole
+    gen_name: paliperidon
+    speciality: INVEGA
+    med_type_id: 6
+  med_base_id26:
+    med_base_id: 26
+    mainclass: Tienobenzodiazepine
+    gen_name: olanzapine
+    speciality: ZYPADHERA
+    med_type_id: 6

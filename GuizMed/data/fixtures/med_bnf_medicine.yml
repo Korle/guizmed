@@ -1,0 +1,387 @@
+# data/fixtures/med_bnf_medicine.yml
+MedBnfMedicine:
+   med_bnf_medicine1:
+    med_bnf_medicine_id: 1
+    med_bnf_percentages_id: 2
+    med_form_id: 3
+    value: 15
+   med_bnf_medicine2:
+    med_bnf_medicine_id: 2
+    med_bnf_percentages_id: 4
+    med_form_id: 3
+    value: 20
+   med_bnf_medicine3:
+    med_bnf_medicine_id: 3
+    med_bnf_percentages_id: 7
+    med_form_id: 3
+    value: 30
+   med_bnf_medicine4:
+    med_bnf_medicine_id: 4
+    med_bnf_percentages_id: 10
+    med_form_id: 3
+    value: 50
+   med_bnf_medicine5:
+    med_bnf_medicine_id: 5
+    med_bnf_percentages_id: 18
+    med_form_id: 3
+    value: 100
+   med_bnf_medicine6:
+    med_bnf_medicine_id: 6
+    med_bnf_percentages_id: 29
+    med_form_id: 3
+    value: 150
+   med_bnf_medicine7:
+    med_bnf_medicine_id: 7
+    med_bnf_percentages_id: 6
+    med_form_id: 5
+    value: 100
+   med_bnf_medicine8:
+    med_bnf_medicine_id: 8
+    med_bnf_percentages_id: 10
+    med_form_id: 5
+    value: 200
+   med_bnf_medicine9:
+    med_bnf_medicine_id: 9
+    med_bnf_percentages_id: 15
+    med_form_id: 5
+    value: 300
+   med_bnf_medicine10:
+    med_bnf_medicine_id: 10
+    med_bnf_percentages_id: 18
+    med_form_id: 5
+    value: 400
+   med_bnf_medicine11:
+    med_bnf_medicine_id: 11
+    med_bnf_percentages_id: 24
+    med_form_id: 5
+    value: 500
+   med_bnf_medicine12:
+    med_bnf_medicine_id: 12
+    med_bnf_percentages_id: 29
+    med_form_id: 5
+    value: 600
+   med_bnf_medicine13:
+    med_bnf_medicine_id: 13
+    med_bnf_percentages_id: 1
+    med_form_id: 10
+    value: 20
+   med_bnf_medicine14:
+    med_bnf_medicine_id: 14
+    med_bnf_percentages_id: 2
+    med_form_id: 10
+    value: 40
+   med_bnf_medicine15:
+    med_bnf_medicine_id: 15
+    med_bnf_percentages_id: 8
+    med_form_id: 10
+    value: 100
+   med_bnf_medicine16:
+    med_bnf_medicine_id: 16
+    med_bnf_percentages_id: 15
+    med_form_id: 10
+    value: 200
+   med_bnf_medicine17:
+    med_bnf_medicine_id: 17
+    med_bnf_percentages_id: 22
+    med_form_id: 10
+    value: 300
+   med_bnf_medicine18:
+    med_bnf_medicine_id: 18
+    med_bnf_percentages_id: 29
+    med_form_id: 10
+    value: 400
+   med_bnf_medicine19:
+    med_bnf_medicine_id: 19
+    med_bnf_percentages_id: 1
+    med_form_id: 17
+    value: 1.5
+   med_bnf_medicine20:
+    med_bnf_medicine_id: 20
+    med_bnf_percentages_id: 2
+    med_form_id: 17
+    value: 3
+   med_bnf_medicine21:
+    med_bnf_medicine_id: 21
+    med_bnf_percentages_id: 6
+    med_form_id: 17
+    value: 5
+   med_bnf_medicine22:
+    med_bnf_medicine_id: 22
+    med_bnf_percentages_id: 10
+    med_form_id: 17
+    value: 10
+   med_bnf_medicine23:
+    med_bnf_medicine_id: 23
+    med_bnf_percentages_id: 15
+    med_form_id: 17
+    value: 15
+   med_bnf_medicine24:
+    med_bnf_medicine_id: 24
+    med_bnf_percentages_id: 18
+    med_form_id: 17
+    value: 20
+   med_bnf_medicine25:
+    med_bnf_medicine_id: 25
+    med_bnf_percentages_id: 25
+    med_form_id: 17
+    value: 25
+   med_bnf_medicine26:
+    med_bnf_medicine_id: 26
+    med_bnf_percentages_id: 29
+    med_form_id: 17
+    value: 30
+   med_bnf_medicine27:
+    med_bnf_medicine_id: 27
+    med_bnf_percentages_id: 10
+    med_form_id: 20
+    value: 25
+   med_bnf_medicine28:
+    med_bnf_medicine_id: 28
+    med_bnf_percentages_id: 15
+    med_form_id: 20
+    value: 37.5
+   med_bnf_medicine29:
+    med_bnf_medicine_id: 29
+    med_bnf_percentages_id: 18
+    med_form_id: 20
+    value: 50
+   med_bnf_medicine30:
+    med_bnf_medicine_id: 30
+    med_bnf_percentages_id: 29
+    med_form_id: 20
+    value: 75
+   med_bnf_medicine31:
+    med_bnf_medicine_id: 31
+    med_bnf_percentages_id: 10
+    med_form_id: 27
+    value: 400
+   med_bnf_medicine32:
+    med_bnf_medicine_id: 32
+    med_bnf_percentages_id: 15
+    med_form_id: 27
+    value: 600
+   med_bnf_medicine33:
+    med_bnf_medicine_id: 33
+    med_bnf_percentages_id: 18
+    med_form_id: 27
+    value: 800
+   med_bnf_medicine34:
+    med_bnf_medicine_id: 34
+    med_bnf_percentages_id: 24
+    med_form_id: 27
+    value: 1000
+   med_bnf_medicine35:
+    med_bnf_medicine_id: 35
+    med_bnf_percentages_id: 29
+    med_form_id: 27
+    value: 1200
+   med_bnf_medicine36:
+    med_bnf_medicine_id: 36
+    med_bnf_percentages_id: 6
+    med_form_id: 28
+    value: 400
+   med_bnf_medicine37:
+    med_bnf_medicine_id: 37
+    med_bnf_percentages_id: 10
+    med_form_id: 28
+    value: 800
+   med_bnf_medicine38:
+    med_bnf_medicine_id: 38
+    med_bnf_percentages_id: 15
+    med_form_id: 28
+    value: 1200
+   med_bnf_medicine39:
+    med_bnf_medicine_id: 39
+    med_bnf_percentages_id: 18
+    med_form_id: 28
+    value: 1600
+   med_bnf_medicine40:
+    med_bnf_medicine_id: 40
+    med_bnf_percentages_id: 26
+    med_form_id: 28
+    value: 2000
+   med_bnf_medicine41:
+    med_bnf_medicine_id: 41
+    med_bnf_percentages_id: 29
+    med_form_id: 28
+    value: 2400
+   med_bnf_medicine42:
+    med_bnf_medicine_id: 42
+    med_bnf_percentages_id: 10
+    med_form_id: 30
+    value: 10
+   med_bnf_medicine43:
+    med_bnf_medicine_id: 43
+    med_bnf_percentages_id: 15
+    med_form_id: 30
+    value: 15
+   med_bnf_medicine44:
+    med_bnf_medicine_id: 44
+    med_bnf_percentages_id: 18
+    med_form_id: 30
+    value: 20
+   med_bnf_medicine45:
+    med_bnf_medicine_id: 45
+    med_bnf_percentages_id: 29
+    med_form_id: 30
+    value: 30
+   med_bnf_medicine46:
+    med_bnf_medicine_id: 46
+    med_bnf_percentages_id: 6
+    med_form_id: 31
+    value: 150
+   med_bnf_medicine47:
+    med_bnf_medicine_id: 47
+    med_bnf_percentages_id: 10
+    med_form_id: 31
+    value: 300
+   med_bnf_medicine48:
+    med_bnf_medicine_id: 48
+    med_bnf_percentages_id: 13
+    med_form_id: 31
+    value: 400
+   med_bnf_medicine49:
+    med_bnf_medicine_id: 49
+    med_bnf_percentages_id: 15
+    med_form_id: 31
+    value: 450
+   med_bnf_medicine50:
+    med_bnf_medicine_id: 50
+    med_bnf_percentages_id: 18
+    med_form_id: 31
+    value: 600
+   med_bnf_medicine51:
+    med_bnf_medicine_id: 51
+    med_bnf_percentages_id: 29
+    med_form_id: 31
+    value: 900
+   med_bnf_medicine52:
+    med_bnf_medicine_id: 52
+    med_bnf_percentages_id: 8
+    med_form_id: 32
+    value: 5
+   med_bnf_medicine53:
+    med_bnf_medicine_id: 53
+    med_bnf_percentages_id: 11
+    med_form_id: 32
+    value: 7.5
+   med_bnf_medicine54:
+    med_bnf_medicine_id: 54
+    med_bnf_percentages_id: 15
+    med_form_id: 32
+    value: 10
+   med_bnf_medicine55:
+    med_bnf_medicine_id: 55
+    med_bnf_percentages_id: 22
+    med_form_id: 32
+    value: 15
+   med_bnf_medicine56:
+    med_bnf_medicine_id: 56
+    med_bnf_percentages_id: 29
+    med_form_id: 32
+    value: 20
+   med_bnf_medicine57:
+    med_bnf_medicine_id: 57
+    med_bnf_percentages_id: 2
+    med_form_id: 33
+    value: 75
+   med_bnf_medicine58:
+    med_bnf_medicine_id: 58
+    med_bnf_percentages_id: 5
+    med_form_id: 33
+    value: 100
+   med_bnf_medicine59:
+    med_bnf_medicine_id: 59
+    med_bnf_percentages_id: 7
+    med_form_id: 33
+    value: 150
+   med_bnf_medicine60:
+    med_bnf_medicine_id: 60
+    med_bnf_percentages_id: 12
+    med_form_id: 33
+    value: 300
+   med_bnf_medicine61:
+    med_bnf_medicine_id: 61
+    med_bnf_percentages_id: 15
+    med_form_id: 33
+    value: 375
+   med_bnf_medicine62:
+    med_bnf_medicine_id: 62
+    med_bnf_percentages_id: 19
+    med_form_id: 33
+    value: 450
+   med_bnf_medicine63:
+    med_bnf_medicine_id: 63
+    med_bnf_percentages_id: 23
+    med_form_id: 33
+    value: 600
+   med_bnf_medicine64:
+    med_bnf_medicine_id: 64
+    med_bnf_percentages_id: 29
+    med_form_id: 33
+    value: 750
+   med_bnf_medicine65:
+    med_bnf_medicine_id: 65
+    med_bnf_percentages_id: 3
+    med_form_id: 34
+    value: 2
+   med_bnf_medicine66:
+    med_bnf_medicine_id: 66
+    med_bnf_percentages_id: 8
+    med_form_id: 34
+    value: 4
+   med_bnf_medicine67:
+    med_bnf_medicine_id: 67
+    med_bnf_percentages_id: 11
+    med_form_id: 34
+    value: 6
+   med_bnf_medicine68:
+    med_bnf_medicine_id: 68
+    med_bnf_percentages_id: 15
+    med_form_id: 34
+    value: 8
+   med_bnf_medicine69:
+    med_bnf_medicine_id: 69
+    med_bnf_percentages_id: 22
+    med_form_id: 34
+    value: 12
+   med_bnf_medicine70:
+    med_bnf_medicine_id: 70
+    med_bnf_percentages_id: 29
+    med_form_id: 34
+    value: 16
+   med_bnf_medicine71:
+    med_bnf_medicine_id: 71
+    med_bnf_percentages_id: 15
+    med_form_id: 37
+    value: 12.5
+   med_bnf_medicine72:
+    med_bnf_medicine_id: 72
+    med_bnf_percentages_id: 22
+    med_form_id: 37
+    value: 18.75
+   med_bnf_medicine73:
+    med_bnf_medicine_id: 73
+    med_bnf_percentages_id: 29
+    med_form_id: 37
+    value: 256
+   med_bnf_medicine74:
+    med_bnf_medicine_id: 74
+    med_bnf_percentages_id: 8
+    med_form_id: 38
+    value: 5
+   med_bnf_medicine75:
+    med_bnf_medicine_id: 75
+    med_bnf_percentages_id: 15
+    med_form_id: 38
+    value: 10
+   med_bnf_medicine76:
+    med_bnf_medicine_id: 76
+    med_bnf_percentages_id: 22
+    med_form_id: 38
+    value: 15
+   med_bnf_medicine77:
+    med_bnf_medicine_id: 77
+    med_bnf_percentages_id: 29
+    med_form_id: 38
+    value: 20

@@ -10,20 +10,17 @@ Doctrine_Manager::getInstance()->bindComponent('IntEnzym', 'doctrine');
  * @property integer $int_enzym_id
  * @property integer $int_enzym_id_minor
  * @property integer $int_enzym_type_id
- * @property Doctrine_Collection $IntEnzym
  * @property IntEnzymType $IntEnzymType
  * @property Doctrine_Collection $IntInteraction
  * 
  * @method integer             getIntEnzymId()         Returns the current record's "int_enzym_id" value
  * @method integer             getIntEnzymIdMinor()    Returns the current record's "int_enzym_id_minor" value
  * @method integer             getIntEnzymTypeId()     Returns the current record's "int_enzym_type_id" value
- * @method Doctrine_Collection getIntEnzym()           Returns the current record's "IntEnzym" collection
  * @method IntEnzymType        getIntEnzymType()       Returns the current record's "IntEnzymType" value
  * @method Doctrine_Collection getIntInteraction()     Returns the current record's "IntInteraction" collection
  * @method IntEnzym            setIntEnzymId()         Sets the current record's "int_enzym_id" value
  * @method IntEnzym            setIntEnzymIdMinor()    Sets the current record's "int_enzym_id_minor" value
  * @method IntEnzym            setIntEnzymTypeId()     Sets the current record's "int_enzym_type_id" value
- * @method IntEnzym            setIntEnzym()           Sets the current record's "IntEnzym" collection
  * @method IntEnzym            setIntEnzymType()       Sets the current record's "IntEnzymType" value
  * @method IntEnzym            setIntInteraction()     Sets the current record's "IntInteraction" collection
  * 
@@ -68,10 +65,6 @@ abstract class BaseIntEnzym extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('IntEnzym', array(
-             'local' => 'int_enzym_id',
-             'foreign' => 'int_enzym_id_minor'));
-
         $this->hasOne('IntEnzymType', array(
              'local' => 'int_enzym_type_id',
              'foreign' => 'med_enzym_types_id'));

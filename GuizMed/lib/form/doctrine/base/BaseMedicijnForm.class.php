@@ -16,33 +16,29 @@ abstract class BaseMedicijnForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'              => new sfWidgetFormInputHidden(),
-      'Hoofdklasse'     => new sfWidgetFormInputText(),
-      'Generische_Naam' => new sfWidgetFormInputText(),
-      'Specialiteit'    => new sfWidgetFormInputText(),
-      'Magistraat_Type' => new sfWidgetFormInputText(),
-      'Type'            => new sfWidgetFormInputText(),
-      'BNF_Percentage'  => new sfWidgetFormInputText(),
-      'BNF_Getal'       => new sfWidgetFormInputText(),
+      'hoofdklasse'     => new sfWidgetFormInputText(),
+      'generische_naam' => new sfWidgetFormInputText(),
+      'specialiteit'    => new sfWidgetFormInputText(),
+      'magistraat_type' => new sfWidgetFormInputText(),
+      'type'            => new sfWidgetFormInputText(),
+      'bnf_percentage'  => new sfWidgetFormInputText(),
+      'bnf_getal'       => new sfWidgetFormInputText(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'Hoofdklasse'     => new sfValidatorString(array('max_length' => 255)),
-      'Generische_Naam' => new sfValidatorString(array('max_length' => 255)),
-      'Specialiteit'    => new sfValidatorString(array('max_length' => 255)),
-      'Magistraat_Type' => new sfValidatorString(array('max_length' => 255)),
-      'Type'            => new sfValidatorString(array('max_length' => 255)),
-      'BNF_Percentage'  => new sfValidatorInteger(),
-      'BNF_Getal'       => new sfValidatorInteger(),
+      'hoofdklasse'     => new sfValidatorString(array('max_length' => 255)),
+      'generische_naam' => new sfValidatorString(array('max_length' => 255)),
+      'specialiteit'    => new sfValidatorString(array('max_length' => 255)),
+      'magistraat_type' => new sfValidatorString(array('max_length' => 255)),
+      'type'            => new sfValidatorString(array('max_length' => 255)),
+      'bnf_percentage'  => new sfValidatorInteger(),
+      'bnf_getal'       => new sfValidatorInteger(),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'Medicijn', 'column' => array('Generische_Naam')))
-    );
 
     $this->widgetSchema->setNameFormat('medicijn[%s]');
 

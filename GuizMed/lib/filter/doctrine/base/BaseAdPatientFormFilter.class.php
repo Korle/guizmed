@@ -17,7 +17,7 @@ abstract class BaseAdPatientFormFilter extends BaseFormFilterDoctrine
       'lname'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'bdate'         => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'patient_since' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'sex'           => new sfWidgetFormChoice(array('choices' => array('' => '', 'M' => 'M', 'F' => 'F'))),
+      'sex'           => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
@@ -25,7 +25,7 @@ abstract class BaseAdPatientFormFilter extends BaseFormFilterDoctrine
       'lname'         => new sfValidatorPass(array('required' => false)),
       'bdate'         => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'patient_since' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
-      'sex'           => new sfValidatorChoice(array('required' => false, 'choices' => array('M' => 'M', 'F' => 'F'))),
+      'sex'           => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('ad_patient_filters[%s]');
@@ -50,7 +50,7 @@ abstract class BaseAdPatientFormFilter extends BaseFormFilterDoctrine
       'lname'         => 'Text',
       'bdate'         => 'Date',
       'patient_since' => 'Date',
-      'sex'           => 'Enum',
+      'sex'           => 'Text',
     );
   }
 }

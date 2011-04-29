@@ -16,8 +16,8 @@ abstract class BasePatientMedicijnForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
-      'patient_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('PatientMedicijn'), 'add_empty' => false)),
-      'Medicijn_id' => new sfWidgetFormInputText(),
+      'patient_id'  => new sfWidgetFormInputText(),
+      'medicijn_id' => new sfWidgetFormInputText(),
       'aantal'      => new sfWidgetFormInputText(),
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
@@ -25,8 +25,8 @@ abstract class BasePatientMedicijnForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'patient_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('PatientMedicijn'))),
-      'Medicijn_id' => new sfValidatorInteger(),
+      'patient_id'  => new sfValidatorInteger(),
+      'medicijn_id' => new sfValidatorInteger(),
       'aantal'      => new sfValidatorInteger(),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
