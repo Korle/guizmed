@@ -855,3 +855,96 @@ Apr 22 09:40:25 symfony [info] {sfWebDebugLogger} Action "patienten/index" 57.92
 Apr 22 09:40:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
 Apr 22 09:40:25 symfony [info] {sfWebDebugLogger} View "Success" for "patienten/index" 23.14 ms (1)
 Apr 22 09:40:25 symfony [info] {sfWebResponse} Send content (20760 o)
+Apr 30 13:21:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+Apr 30 13:22:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 13:22:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 13:22:00 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+Apr 30 13:22:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 13:22:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m - ()
+Apr 30 13:22:00 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/indexSuccess.php"
+Apr 30 13:22:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 13:22:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 13:22:00 symfony [info] {sfWebDebugLogger} Configuration 176.44 ms (10)
+Apr 30 13:22:00 symfony [info] {sfWebDebugLogger} Factories 205.26 ms (1)
+Apr 30 13:22:00 symfony [info] {sfWebDebugLogger} Action "medicijnbeheer/index" 63.54 ms (1)
+Apr 30 13:22:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 30 13:22:00 symfony [info] {sfWebDebugLogger} View "Success" for "medicijnbeheer/index" 24.17 ms (1)
+Apr 30 13:22:00 symfony [info] {sfWebResponse} Send content (22244 o)
+Apr 30 14:15:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /medicijnbeheer with parameters array (  'module' => 'medicijnbeheer',  'action' => 'index',)
+Apr 30 14:15:46 symfony [info] {myUser} Automatic user logout due to timeout
+Apr 30 14:15:46 symfony [info] {myUser} User is not authenticated
+Apr 30 14:15:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 14:15:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 14:15:46 symfony [info] {medicijnbeheerActions} Call "medicijnbeheerActions->executeIndex()"
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.med_form_id AS m__med_form_id, m.med_base_id AS m__med_base_id, m.med_magister_form_id AS m__med_magister_form_id, m.dose AS m__dose, m.bioavailability AS m__bioavailability, m.proteine_binding AS m__proteine_binding, m.t_max_h AS m__t_max_h, m.hlf AS m__hlf, m.ddd AS m__ddd FROM med_form m - ()
+Apr 30 14:15:46 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\apps\backend\modules/medicijnbeheer/templates/indexSuccess.php"
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (1)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (2)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (3)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (3)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (3)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (2)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (3)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (4)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (5)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (5)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (6)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (6)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (7)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (8)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (8)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (9)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (10)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (10)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (10)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (10)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (11)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (11)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (12)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (13)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (14)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (15)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (16)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (17)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (18)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (19)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (20)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (21)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (22)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (23)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (24)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (25)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (21)
+Apr 30 14:15:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.med_base_id AS m__med_base_id, m.mainclass AS m__mainclass, m.gen_name AS m__gen_name, m.speciality AS m__speciality, m.med_type_id AS m__med_type_id FROM med_base_id m WHERE (m.med_base_id = ?) - (26)
+Apr 30 14:15:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 14:15:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 14:15:47 symfony [info] {sfWebDebugLogger} Configuration 13.42 ms (9)
+Apr 30 14:15:47 symfony [info] {sfWebDebugLogger} Factories 65.31 ms (1)
+Apr 30 14:15:47 symfony [info] {sfWebDebugLogger} Action "medicijnbeheer/index" 65.06 ms (1)
+Apr 30 14:15:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.32 ms (40)
+Apr 30 14:15:47 symfony [info] {sfWebDebugLogger} View "Success" for "medicijnbeheer/index" 692.17 ms (1)
+Apr 30 14:15:47 symfony [info] {sfWebResponse} Send content (100994 o)
+Apr 30 14:15:58 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 30 14:15:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 14:15:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 14:15:58 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 30 14:15:58 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\lib\vendor\symfony\lib/controller/default/templates/indexSuccess.php"
+Apr 30 14:15:58 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\guizmed\GuizMed\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Apr 30 14:15:58 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Apr 30 14:15:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 14:15:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 14:15:58 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 30 14:15:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 14:15:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 14:15:58 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 30 14:15:58 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\lib\vendor\symfony\lib/controller/default/templates/indexSuccess.php"
+Apr 30 14:15:58 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\guizmed\GuizMed\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Apr 30 14:15:58 symfony [info] {sfPHPView} Render "C:\wamp\www\guizmed\GuizMed\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Apr 30 14:15:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 14:15:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 14:15:58 symfony [info] {sfWebDebugLogger} Configuration 11.23 ms (9)
+Apr 30 14:15:58 symfony [info] {sfWebDebugLogger} Factories 48.29 ms (1)
+Apr 30 14:15:58 symfony [info] {sfWebDebugLogger} Action "default/index" 0.22 ms (1)
+Apr 30 14:15:58 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 16.33 ms (1)
+Apr 30 14:15:58 symfony [info] {sfWebResponse} Send content (29819 o)
