@@ -13,11 +13,11 @@ abstract class BaseMedBnfPercentageFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'percentage'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'percentage'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'percentage'            => new sfValidatorPass(array('required' => false)),
+      'percentage'        => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('med_bnf_percentage_filters[%s]');
@@ -37,8 +37,8 @@ abstract class BaseMedBnfPercentageFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'med_bnf_percentage_id' => 'Number',
-      'percentage'            => 'Text',
+      'bnf_percentage_id' => 'Number',
+      'percentage'        => 'Text',
     );
   }
 }

@@ -22,6 +22,7 @@ abstract class BaseAdUserFormFilter extends BaseFormFilterDoctrine
       'ad_role_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdRole'), 'add_empty' => true)),
       'ad_function_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdFunction'), 'add_empty' => true)),
       'unlock_code'    => new sfWidgetFormFilterInput(),
+      'token'          => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -34,6 +35,7 @@ abstract class BaseAdUserFormFilter extends BaseFormFilterDoctrine
       'ad_role_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdRole'), 'column' => 'role_id')),
       'ad_function_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdFunction'), 'column' => 'function_id')),
       'unlock_code'    => new sfValidatorPass(array('required' => false)),
+      'token'          => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('ad_user_filters[%s]');
@@ -63,6 +65,7 @@ abstract class BaseAdUserFormFilter extends BaseFormFilterDoctrine
       'ad_role_id'     => 'ForeignKey',
       'ad_function_id' => 'ForeignKey',
       'unlock_code'    => 'Text',
+      'token'          => 'Text',
     );
   }
 }

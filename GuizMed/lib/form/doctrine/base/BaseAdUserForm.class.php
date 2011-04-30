@@ -25,6 +25,7 @@ abstract class BaseAdUserForm extends BaseFormDoctrine
       'ad_role_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdRole'), 'add_empty' => false)),
       'ad_function_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdFunction'), 'add_empty' => false)),
       'unlock_code'    => new sfWidgetFormInputText(),
+      'token'          => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -38,6 +39,7 @@ abstract class BaseAdUserForm extends BaseFormDoctrine
       'ad_role_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdRole'))),
       'ad_function_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdFunction'))),
       'unlock_code'    => new sfValidatorString(array('max_length' => 50, 'required' => false)),
+      'token'          => new sfValidatorString(array('max_length' => 45, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('ad_user[%s]');

@@ -15,13 +15,13 @@ abstract class BaseMedBnfPercentageForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'med_bnf_percentage_id' => new sfWidgetFormInputHidden(),
-      'percentage'            => new sfWidgetFormInputText(),
+      'bnf_percentage_id' => new sfWidgetFormInputHidden(),
+      'percentage'        => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'med_bnf_percentage_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('med_bnf_percentage_id')), 'empty_value' => $this->getObject()->get('med_bnf_percentage_id'), 'required' => false)),
-      'percentage'            => new sfValidatorString(array('max_length' => 45)),
+      'bnf_percentage_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('bnf_percentage_id')), 'empty_value' => $this->getObject()->get('bnf_percentage_id'), 'required' => false)),
+      'percentage'        => new sfValidatorString(array('max_length' => 45)),
     ));
 
     $this->widgetSchema->setNameFormat('med_bnf_percentage[%s]');

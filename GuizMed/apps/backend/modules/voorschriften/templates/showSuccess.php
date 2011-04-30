@@ -36,6 +36,14 @@
       <th>Comment:</th>
       <td><?php echo $ad_prescription->getComment() ?></td>
     </tr>
+    <tr>
+      <th>Stop date:</th>
+      <td><?php echo $ad_prescription->getStopDate() ?></td>
+    </tr>
+    <tr>
+      <th>Stop reason:</th>
+      <td><?php echo $ad_prescription->getStopReason() ?></td>
+    </tr>
   </tbody>
 </table>
 

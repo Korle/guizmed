@@ -12,6 +12,8 @@
       <th>User patient</th>
       <th>Med form</th>
       <th>Comment</th>
+      <th>Stop date</th>
+      <th>Stop reason</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +28,8 @@
       <td><?php echo $ad_prescription->getUserPatientId() ?></td>
       <td><?php echo $ad_prescription->getMedFormId() ?></td>
       <td><?php echo $ad_prescription->getComment() ?></td>
+      <td><?php echo $ad_prescription->getStopDate() ?></td>
+      <td><?php echo $ad_prescription->getStopReason() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

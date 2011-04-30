@@ -12,27 +12,27 @@ class voorschriftenActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->ad_prescriptions = Doctrine_Core::getTable('AdPrescription')
+    $this->ad_prescriptions = Doctrine_Core::getTable('adPrescription')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->ad_prescription = Doctrine_Core::getTable('AdPrescription')->find(array($request->getParameter('ad_presc_id')));
+    $this->ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id')));
     $this->forward404Unless($this->ad_prescription);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new AdPrescriptionForm();
+    $this->form = new adPrescriptionForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new AdPrescriptionForm();
+    $this->form = new adPrescriptionForm();
 
     $this->processForm($request, $this->form);
 
@@ -41,15 +41,15 @@ class voorschriftenActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('AdPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
-    $this->form = new AdPrescriptionForm($ad_prescription);
+    $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
+    $this->form = new adPrescriptionForm($ad_prescription);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('AdPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
-    $this->form = new AdPrescriptionForm($ad_prescription);
+    $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
+    $this->form = new adPrescriptionForm($ad_prescription);
 
     $this->processForm($request, $this->form);
 
@@ -60,7 +60,7 @@ class voorschriftenActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('AdPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
+    $this->forward404Unless($ad_prescription = Doctrine_Core::getTable('adPrescription')->find(array($request->getParameter('ad_presc_id'))), sprintf('Object ad_prescription does not exist (%s).', $request->getParameter('ad_presc_id')));
     $ad_prescription->delete();
 
     $this->redirect('voorschriften/index');

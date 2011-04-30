@@ -12,27 +12,27 @@ class usersActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->ad_users = Doctrine_Core::getTable('AdUser')
+    $this->ad_users = Doctrine_Core::getTable('adUser')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->ad_user = Doctrine_Core::getTable('AdUser')->find(array($request->getParameter('user_id')));
+    $this->ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id')));
     $this->forward404Unless($this->ad_user);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new AdUserForm();
+    $this->form = new adUserForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new AdUserForm();
+    $this->form = new adUserForm();
 
     $this->processForm($request, $this->form);
 
@@ -41,15 +41,15 @@ class usersActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($ad_user = Doctrine_Core::getTable('AdUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
-    $this->form = new AdUserForm($ad_user);
+    $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
+    $this->form = new adUserForm($ad_user);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($ad_user = Doctrine_Core::getTable('AdUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
-    $this->form = new AdUserForm($ad_user);
+    $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
+    $this->form = new adUserForm($ad_user);
 
     $this->processForm($request, $this->form);
 
@@ -60,7 +60,7 @@ class usersActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($ad_user = Doctrine_Core::getTable('AdUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
+    $this->forward404Unless($ad_user = Doctrine_Core::getTable('adUser')->find(array($request->getParameter('user_id'))), sprintf('Object ad_user does not exist (%s).', $request->getParameter('user_id')));
     $ad_user->delete();
 
     $this->redirect('users/index');

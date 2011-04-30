@@ -40,6 +40,10 @@
       <th>Unlock code:</th>
       <td><?php echo $ad_user->getUnlockCode() ?></td>
     </tr>
+    <tr>
+      <th>Token:</th>
+      <td><?php echo $ad_user->getToken() ?></td>
+    </tr>
   </tbody>
 </table>
 

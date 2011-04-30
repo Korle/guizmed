@@ -15,13 +15,13 @@ abstract class BaseMedChemBondingForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'med_chem_bonding_id' => new sfWidgetFormInputHidden(),
-      'name'                => new sfWidgetFormInputText(),
+      'chem_bonding_id' => new sfWidgetFormInputHidden(),
+      'name'            => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'med_chem_bonding_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('med_chem_bonding_id')), 'empty_value' => $this->getObject()->get('med_chem_bonding_id'), 'required' => false)),
-      'name'                => new sfValidatorString(array('max_length' => 45, 'required' => false)),
+      'chem_bonding_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('chem_bonding_id')), 'empty_value' => $this->getObject()->get('chem_bonding_id'), 'required' => false)),
+      'name'            => new sfValidatorString(array('max_length' => 45, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('med_chem_bonding[%s]');

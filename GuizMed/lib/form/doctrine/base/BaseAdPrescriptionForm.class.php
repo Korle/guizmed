@@ -24,6 +24,8 @@ abstract class BaseAdPrescriptionForm extends BaseFormDoctrine
       'user_patient_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUserPatient'), 'add_empty' => false)),
       'med_form_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedForm'), 'add_empty' => false)),
       'comment'         => new sfWidgetFormTextarea(),
+      'stop_date'       => new sfWidgetFormDateTime(),
+      'stop_reason'     => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -36,6 +38,8 @@ abstract class BaseAdPrescriptionForm extends BaseFormDoctrine
       'user_patient_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('AdUserPatient'))),
       'med_form_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('MedForm'))),
       'comment'         => new sfValidatorString(array('required' => false)),
+      'stop_date'       => new sfValidatorDateTime(array('required' => false)),
+      'stop_reason'     => new sfValidatorString(array('max_length' => 45, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('ad_prescription[%s]');

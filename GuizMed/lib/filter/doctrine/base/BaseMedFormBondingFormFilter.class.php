@@ -20,7 +20,7 @@ abstract class BaseMedFormBondingFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'med_form_id'         => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedForm'), 'column' => 'med_form_id')),
-      'med_chem_bonding_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedChemBonding'), 'column' => 'med_chem_bonding_id')),
+      'med_chem_bonding_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedChemBonding'), 'column' => 'chem_bonding_id')),
       'med_ki_val_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedKiVal'), 'column' => 'med_ki_val_id')),
     ));
 

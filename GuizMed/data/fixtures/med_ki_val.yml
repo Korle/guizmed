@@ -3,215 +3,365 @@ MedKiVal:
   med_ki_val1:
      med_ki_val_id: 1
      value: ---
-     tagval: 0.1-1
+     tagval: <0.1
      influence: -3
   med_ki_val2:
      med_ki_val_id: 2
      value: --
-     tagval: 0.1-1
+     tagval: <0.1
      influence: -2
   med_ki_val3:
      med_ki_val_id: 3
      value: -
-     tagval: 0.1-1
+     tagval: <0.1
      influence: -1
   med_ki_val4:
      med_ki_val_id: 4
      value: +/-
-     tagval: 0.1-1
+     tagval: <0.1
      influence: 0
   med_ki_val5:
      med_ki_val_id: 5
      value: +
-     tagval: 0.1-1
+     tagval: <0.1
      influence: 1
   med_ki_val6:
      med_ki_val_id: 6
      value: ++
-     tagval: 0.1-1
+     tagval: <0.1
      influence: 2
   med_ki_val7:
      med_ki_val_id: 7
      value: +++
-     tagval: 0.1-1
+     tagval: <0.1
      influence: 3
   med_ki_val8:
      med_ki_val_id: 8
-     value: ---
-     tagval: 1-10
-     influence: -3
+     value: ++++
+     tagval: <0.1
+     influence: 4
   med_ki_val9:
      med_ki_val_id: 9
-     value: --
-     tagval: 1-10
-     influence: -2
+     value: +++++
+     tagval: <0.1
+     influence: 5
   med_ki_val10:
      med_ki_val_id: 10
-     value: -
-     tagval: 1-10
-     influence: -1
+     value: ---
+     tagval: 0.1-1
+     influence: -3
   med_ki_val11:
      med_ki_val_id: 11
-     value: +/-
-     tagval: 1-10
-     influence: 0
+     value: --
+     tagval: 0.1-1
+     influence: -2
   med_ki_val12:
      med_ki_val_id: 12
-     value: +
-     tagval: 1-10
-     influence: 1
+     value: -
+     tagval: 0.1-1
+     influence: -1
   med_ki_val13:
      med_ki_val_id: 13
-     value: ++
-     tagval: 1-10
-     influence: 2
+     value: +/-
+     tagval: 0.1-1
+     influence: 0
   med_ki_val14:
      med_ki_val_id: 14
+     value: +
+     tagval: 0.1-1
+     influence: 1
+  med_ki_val15:
+     med_ki_val_id: 15
+     value: ++
+     tagval: 0.1-1
+     influence: 2
+  med_ki_val16:
+     med_ki_val_id: 16
+     value: +++
+     tagval: 0.1-1
+     influence: 3
+  med_ki_val17:
+     med_ki_val_id: 17
+     value: ++++
+     tagval: 0.1-1
+     influence: 4
+  med_ki_val18:
+     med_ki_val_id: 18
+     value: +++++
+     tagval: 0.1-1
+     influence: 5
+  med_ki_val19:
+     med_ki_val_id: 19
+     value: ---
+     tagval: 1-10
+     influence: -3
+  med_ki_val20:
+     med_ki_val_id: 20
+     value: --
+     tagval: 1-10
+     influence: -2
+  med_ki_val21:
+     med_ki_val_id: 21
+     value: -
+     tagval: 1-10
+     influence: -1
+  med_ki_val22:
+     med_ki_val_id: 22
+     value: +/-
+     tagval: 1-10
+     influence: 0
+  med_ki_val23:
+     med_ki_val_id: 23
+     value: +
+     tagval: 1-10
+     influence: 1
+  med_ki_val24:
+     med_ki_val_id: 24
+     value: ++
+     tagval: 1-10
+     influence: 2
+  med_ki_val25:
+     med_ki_val_id: 25
      value: +++
      tagval: 1-10
      influence: 3
-  med_ki_val15:
-     med_ki_val_id: 15
-     value: ---
-     tagval: 10-100
-     influence: -3
-  med_ki_val16:
-     med_ki_val_id: 16
-     value: --
-     tagval: 10-100
-     influence: -2
-  med_ki_val17:
-     med_ki_val_id: 17
-     value: -
-     tagval: 10-100
-     influence: -1
-  med_ki_val18:
-     med_ki_val_id: 18
-     value: +/-
-     tagval: 10-100
-     influence: 0
-  med_ki_val19:
-     med_ki_val_id: 19
-     value: +
-     tagval: 10-100
-     influence: 1
-  med_ki_val20:
-     med_ki_val_id: 20
-     value: ++
-     tagval: 10-100
-     influence: 2
-  med_ki_val21:
-     med_ki_val_id: 21
-     value: +++
-     tagval: 10-100
-     influence: 3
-  med_ki_val22:
-     med_ki_val_id: 22
-     value: ---
-     tagval: 100-1000
-     influence: -3
-  med_ki_val23:
-     med_ki_val_id: 23
-     value: --
-     tagval: 100-1000
-     influence: -2
-  med_ki_val24:
-     med_ki_val_id: 24
-     value: -
-     tagval: 100-1000
-     influence: -1
-  med_ki_val25:
-     med_ki_val_id: 25
-     value: +/-
-     tagval: 100-1000
-     influence: 0
   med_ki_val26:
      med_ki_val_id: 26
-     value: +
-     tagval: 100-1000
-     influence: 1
+     value: ++++
+     tagval: 1-10
+     influence: 4
   med_ki_val27:
      med_ki_val_id: 27
-     value: ++
-     tagval: 100-1000
-     influence: 2
+     value: +++++
+     tagval: 1-10
+     influence: 5
   med_ki_val28:
      med_ki_val_id: 28
+     value: ---
+     tagval: 10-100
+     influence: -3
+  med_ki_val29:
+     med_ki_val_id: 29
+     value: --
+     tagval: 10-100
+     influence: -2
+  med_ki_val30:
+     med_ki_val_id: 30
+     value: -
+     tagval: 10-100
+     influence: -1
+  med_ki_val31:
+     med_ki_val_id: 31
+     value: +/-
+     tagval: 10-100
+     influence: 0
+  med_ki_val32:
+     med_ki_val_id: 32
+     value: +
+     tagval: 10-100
+     influence: 1
+  med_ki_val33:
+     med_ki_val_id: 33
+     value: ++
+     tagval: 10-100
+     influence: 2
+  med_ki_val34:
+     med_ki_val_id: 34
+     value: +++
+     tagval: 10-100
+     influence: 3
+  med_ki_val35:
+     med_ki_val_id: 35
+     value: ++++
+     tagval: 10-100
+     influence: 4
+  med_ki_val36:
+     med_ki_val_id: 36
+     value: +++++
+     tagval: 10-100
+     influence: 5
+  med_ki_val37:
+     med_ki_val_id: 37
+     value: ---
+     tagval: 100-1000
+     influence: -3
+  med_ki_val38:
+     med_ki_val_id: 38
+     value: --
+     tagval: 100-1000
+     influence: -2
+  med_ki_val39:
+     med_ki_val_id: 39
+     value: -
+     tagval: 100-1000
+     influence: -1
+  med_ki_val40:
+     med_ki_val_id: 40
+     value: +/-
+     tagval: 100-1000
+     influence: 0
+  med_ki_val41:
+     med_ki_val_id: 41
+     value: +
+     tagval: 100-1000
+     influence: 1
+  med_ki_val42:
+     med_ki_val_id: 42
+     value: ++
+     tagval: 100-1000
+     influence: 2
+  med_ki_val43:
+     med_ki_val_id: 43
      value: +++
      tagval: 100-1000
      influence: 3
-  med_ki_val29:
-     med_ki_val_id: 29
+  med_ki_val44:
+     med_ki_val_id: 44
+     value: ++++
+     tagval: 100-1000
+     influence: 4
+  med_ki_val45:
+     med_ki_val_id: 45
+     value: +++++
+     tagval: 100-1000
+     influence: 5
+  med_ki_val46:
+     med_ki_val_id: 46
      value: ---
      tagval: 1000-10000
      influence: -3
-  med_ki_val30:
-     med_ki_val_id: 30
+  med_ki_val47:
+     med_ki_val_id: 47
      value: --
      tagval: 1000-10000
      influence: -2
-  med_ki_val31:
-     med_ki_val_id: 31
+  med_ki_val48:
+     med_ki_val_id: 48
      value: -
      tagval: 1000-10000
      influence: -1
-  med_ki_val32:
-     med_ki_val_id: 32
+  med_ki_val49:
+     med_ki_val_id: 49
      value: +/-
      tagval: 1000-10000
      influence: 0
-  med_ki_val33:
-     med_ki_val_id: 33
+  med_ki_val50:
+     med_ki_val_id: 50
      value: +
      tagval: 1000-10000
      influence: 1
-  med_ki_val34:
-     med_ki_val_id: 34
+  med_ki_val51:
+     med_ki_val_id: 51
      value: ++
      tagval: 1000-10000
      influence: 2
-  med_ki_val35:
-     med_ki_val_id: 35
+  med_ki_val52:
+     med_ki_val_id: 52
      value: +++
      tagval: 1000-10000
      influence: 3
-  med_ki_val36:
-     med_ki_val_id: 36
+  med_ki_val53:
+     med_ki_val_id: 53
+     value: ++++
+     tagval: 1000-10000
+     influence: 4
+  med_ki_val54:
+     med_ki_val_id: 54
+     value: +++++
+     tagval: 1000-10000
+     influence: 5
+  med_ki_val55:
+     med_ki_val_id: 55
      value: ---
      tagval: 10.000-100000
      influence: -3
-  med_ki_val37:
-     med_ki_val_id: 37
+  med_ki_val56:
+     med_ki_val_id: 56
      value: --
      tagval: 10.000-100000
      influence: -2
-  med_ki_val38:
-     med_ki_val_id: 38
+  med_ki_val57:
+     med_ki_val_id: 57
      value: -
      tagval: 10.000-100000
      influence: -1
-  med_ki_val39:
-     med_ki_val_id: 39
+  med_ki_val58:
+     med_ki_val_id: 58
      value: +/-
      tagval: 10.000-100000
      influence: 0
-  med_ki_val40:
-     med_ki_val_id: 40
+  med_ki_val59:
+     med_ki_val_id: 59
      value: +
      tagval: 10.000-100000
      influence: 1
-  med_ki_val41:
-     med_ki_val_id: 41
+  med_ki_val60:
+     med_ki_val_id: 60
      value: ++
      tagval: 10.000-100000
      influence: 2
-  med_ki_val42:
-     med_ki_val_id: 42
+  med_ki_val61:
+     med_ki_val_id: 61
      value: +++
      tagval: 10.000-100000
      influence: 3
-  med_ki_val43:
-     med_ki_val_id: 43
-     value: ?
-     tagval: 
-     influence: 
+  med_ki_val62:
+     med_ki_val_id: 62
+     value: ++++
+     tagval: 10.000-100000
+     influence: 4
+  med_ki_val63:
+     med_ki_val_id: 63
+     value: +++++
+     tagval: 10.000-100000
+     influence: 5
+  med_ki_val64:
+     med_ki_val_id: 64
+     value: ---
+     tagval: >100.000
+     influence: -3
+  med_ki_val65:
+     med_ki_val_id: 65
+     value: --
+     tagval: >100.000
+     influence: -2
+  med_ki_val66:
+     med_ki_val_id: 66
+     value: -
+     tagval: >100.000
+     influence: -1
+  med_ki_val67:
+     med_ki_val_id: 67
+     value: +/-
+     tagval: >100.000
+     influence: 0
+  med_ki_val68:
+     med_ki_val_id: 68
+     value: +
+     tagval: >100.000
+     influence: 1
+  med_ki_val69:
+     med_ki_val_id: 69
+     value: ++
+     tagval: >100.000
+     influence: 2
+  med_ki_val70:
+     med_ki_val_id: 70
+     value: +++
+     tagval: >100.000
+     influence: 3
+  med_ki_val71:
+     med_ki_val_id: 71
+     value: ++++
+     tagval: >100.000
+     influence: 4
+  med_ki_val73:
+    influence: 99
+    med_ki_val_id: 73
+    tagval: 
+    value: "?"
+  med_ki_val72:
+     med_ki_val_id: 72
+     value: +++++
+     tagval: >100.000
+     influence: 5

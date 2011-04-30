@@ -16,8 +16,10 @@ Doctrine_Manager::getInstance()->bindComponent('AdPrescription', 'doctrine');
  * @property integer $user_patient_id
  * @property integer $med_form_id
  * @property blob $comment
- * @property MedForm $MedForm
+ * @property timestamp $stop_date
+ * @property string $stop_reason
  * @property AdUserPatient $AdUserPatient
+ * @property MedForm $MedForm
  * 
  * @method integer        getAdPrescId()       Returns the current record's "ad_presc_id" value
  * @method timestamp      getStartDate()       Returns the current record's "start_date" value
@@ -28,8 +30,10 @@ Doctrine_Manager::getInstance()->bindComponent('AdPrescription', 'doctrine');
  * @method integer        getUserPatientId()   Returns the current record's "user_patient_id" value
  * @method integer        getMedFormId()       Returns the current record's "med_form_id" value
  * @method blob           getComment()         Returns the current record's "comment" value
- * @method MedForm        getMedForm()         Returns the current record's "MedForm" value
+ * @method timestamp      getStopDate()        Returns the current record's "stop_date" value
+ * @method string         getStopReason()      Returns the current record's "stop_reason" value
  * @method AdUserPatient  getAdUserPatient()   Returns the current record's "AdUserPatient" value
+ * @method MedForm        getMedForm()         Returns the current record's "MedForm" value
  * @method AdPrescription setAdPrescId()       Sets the current record's "ad_presc_id" value
  * @method AdPrescription setStartDate()       Sets the current record's "start_date" value
  * @method AdPrescription setEndDate()         Sets the current record's "end_date" value
@@ -39,8 +43,10 @@ Doctrine_Manager::getInstance()->bindComponent('AdPrescription', 'doctrine');
  * @method AdPrescription setUserPatientId()   Sets the current record's "user_patient_id" value
  * @method AdPrescription setMedFormId()       Sets the current record's "med_form_id" value
  * @method AdPrescription setComment()         Sets the current record's "comment" value
- * @method AdPrescription setMedForm()         Sets the current record's "MedForm" value
+ * @method AdPrescription setStopDate()        Sets the current record's "stop_date" value
+ * @method AdPrescription setStopReason()      Sets the current record's "stop_reason" value
  * @method AdPrescription setAdUserPatient()   Sets the current record's "AdUserPatient" value
+ * @method AdPrescription setMedForm()         Sets the current record's "MedForm" value
  * 
  * @package    GuizMed
  * @subpackage model
@@ -132,17 +138,35 @@ abstract class BaseAdPrescription extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
+        $this->hasColumn('stop_date', 'timestamp', 25, array(
+             'type' => 'timestamp',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 25,
+             ));
+        $this->hasColumn('stop_reason', 'string', 45, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 45,
+             ));
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('MedForm', array(
-             'local' => 'med_form_id',
-             'foreign' => 'med_form_id'));
-
         $this->hasOne('AdUserPatient', array(
              'local' => 'user_patient_id',
              'foreign' => 'user_patient_id'));
+
+        $this->hasOne('MedForm', array(
+             'local' => 'med_form_id',
+             'foreign' => 'med_form_id'));
     }
 }

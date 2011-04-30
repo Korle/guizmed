@@ -17,8 +17,9 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @property integer $ad_role_id
  * @property integer $ad_function_id
  * @property string $unlock_code
- * @property AdFunction $AdFunction
+ * @property string $token
  * @property AdRole $AdRole
+ * @property AdFunction $AdFunction
  * @property Doctrine_Collection $AdUserPatient
  * @property Doctrine_Collection $AdUserPatient_3
  * 
@@ -32,8 +33,9 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @method integer             getAdRoleId()        Returns the current record's "ad_role_id" value
  * @method integer             getAdFunctionId()    Returns the current record's "ad_function_id" value
  * @method string              getUnlockCode()      Returns the current record's "unlock_code" value
- * @method AdFunction          getAdFunction()      Returns the current record's "AdFunction" value
+ * @method string              getToken()           Returns the current record's "token" value
  * @method AdRole              getAdRole()          Returns the current record's "AdRole" value
+ * @method AdFunction          getAdFunction()      Returns the current record's "AdFunction" value
  * @method Doctrine_Collection getAdUserPatient()   Returns the current record's "AdUserPatient" collection
  * @method Doctrine_Collection getAdUserPatient3()  Returns the current record's "AdUserPatient_3" collection
  * @method AdUser              setUserId()          Sets the current record's "user_id" value
@@ -46,8 +48,9 @@ Doctrine_Manager::getInstance()->bindComponent('AdUser', 'doctrine');
  * @method AdUser              setAdRoleId()        Sets the current record's "ad_role_id" value
  * @method AdUser              setAdFunctionId()    Sets the current record's "ad_function_id" value
  * @method AdUser              setUnlockCode()      Sets the current record's "unlock_code" value
- * @method AdUser              setAdFunction()      Sets the current record's "AdFunction" value
+ * @method AdUser              setToken()           Sets the current record's "token" value
  * @method AdUser              setAdRole()          Sets the current record's "AdRole" value
+ * @method AdUser              setAdFunction()      Sets the current record's "AdFunction" value
  * @method AdUser              setAdUserPatient()   Sets the current record's "AdUserPatient" collection
  * @method AdUser              setAdUserPatient3()  Sets the current record's "AdUserPatient_3" collection
  * 
@@ -150,25 +153,34 @@ abstract class BaseAdUser extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 50,
              ));
+        $this->hasColumn('token', 'string', 45, array(
+             'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             'length' => 45,
+             ));
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('AdFunction', array(
-             'local' => 'ad_function_id',
-             'foreign' => 'function_id'));
-
         $this->hasOne('AdRole', array(
              'local' => 'ad_role_id',
              'foreign' => 'role_id'));
 
+        $this->hasOne('AdFunction', array(
+             'local' => 'ad_function_id',
+             'foreign' => 'function_id'));
+
         $this->hasMany('AdUserPatient', array(
              'local' => 'user_id',
-             'foreign' => 'prev_user_id'));
+             'foreign' => 'user_id'));
 
         $this->hasMany('AdUserPatient as AdUserPatient_3', array(
              'local' => 'user_id',
-             'foreign' => 'user_id'));
+             'foreign' => 'prev_user_id'));
     }
 }

@@ -21,6 +21,8 @@ abstract class BaseAdPrescriptionFormFilter extends BaseFormFilterDoctrine
       'user_patient_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('AdUserPatient'), 'add_empty' => true)),
       'med_form_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('MedForm'), 'add_empty' => true)),
       'comment'         => new sfWidgetFormFilterInput(),
+      'stop_date'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
+      'stop_reason'     => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -32,6 +34,8 @@ abstract class BaseAdPrescriptionFormFilter extends BaseFormFilterDoctrine
       'user_patient_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('AdUserPatient'), 'column' => 'user_patient_id')),
       'med_form_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedForm'), 'column' => 'med_form_id')),
       'comment'         => new sfValidatorPass(array('required' => false)),
+      'stop_date'       => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'stop_reason'     => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('ad_prescription_filters[%s]');
@@ -60,6 +64,8 @@ abstract class BaseAdPrescriptionFormFilter extends BaseFormFilterDoctrine
       'user_patient_id' => 'ForeignKey',
       'med_form_id'     => 'ForeignKey',
       'comment'         => 'Text',
+      'stop_date'       => 'Date',
+      'stop_reason'     => 'Text',
     );
   }
 }

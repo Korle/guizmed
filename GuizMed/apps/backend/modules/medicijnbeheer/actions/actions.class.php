@@ -12,27 +12,27 @@ class medicijnbeheerActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->med_forms = Doctrine_Core::getTable('MedForm')
+    $this->med_forms = Doctrine_Core::getTable('medForm')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->med_form = Doctrine_Core::getTable('MedForm')->find(array($request->getParameter('med_form_id')));
+    $this->med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id')));
     $this->forward404Unless($this->med_form);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new MedFormForm();
+    $this->form = new medFormForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new MedFormForm();
+    $this->form = new medFormForm();
 
     $this->processForm($request, $this->form);
 
@@ -41,15 +41,15 @@ class medicijnbeheerActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($med_form = Doctrine_Core::getTable('MedForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
-    $this->form = new MedFormForm($med_form);
+    $this->forward404Unless($med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
+    $this->form = new medFormForm($med_form);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($med_form = Doctrine_Core::getTable('MedForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
-    $this->form = new MedFormForm($med_form);
+    $this->forward404Unless($med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
+    $this->form = new medFormForm($med_form);
 
     $this->processForm($request, $this->form);
 
@@ -60,7 +60,7 @@ class medicijnbeheerActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($med_form = Doctrine_Core::getTable('MedForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
+    $this->forward404Unless($med_form = Doctrine_Core::getTable('medForm')->find(array($request->getParameter('med_form_id'))), sprintf('Object med_form does not exist (%s).', $request->getParameter('med_form_id')));
     $med_form->delete();
 
     $this->redirect('medicijnbeheer/index');

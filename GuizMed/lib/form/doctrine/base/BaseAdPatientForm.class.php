@@ -20,7 +20,7 @@ abstract class BaseAdPatientForm extends BaseFormDoctrine
       'lname'         => new sfWidgetFormInputText(),
       'bdate'         => new sfWidgetFormDate(),
       'patient_since' => new sfWidgetFormDateTime(),
-      'sex'           => new sfWidgetFormInputText(),
+      'sex'           => new sfWidgetFormChoice(array('choices' => array('M' => 'M', 'F' => 'F'))),
     ));
 
     $this->setValidators(array(
@@ -29,7 +29,7 @@ abstract class BaseAdPatientForm extends BaseFormDoctrine
       'lname'         => new sfValidatorString(array('max_length' => 45)),
       'bdate'         => new sfValidatorDate(),
       'patient_since' => new sfValidatorDateTime(),
-      'sex'           => new sfValidatorString(array('max_length' => 1)),
+      'sex'           => new sfValidatorChoice(array('choices' => array(0 => 'M', 1 => 'F'))),
     ));
 
     $this->widgetSchema->setNameFormat('ad_patient[%s]');

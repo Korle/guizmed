@@ -13,6 +13,7 @@
       <th>Ad role</th>
       <th>Ad function</th>
       <th>Unlock code</th>
+      <th>Token</th>
     </tr>
   </thead>
   <tbody>
@@ -28,6 +29,7 @@
       <td><?php echo $ad_user->getAdRoleId() ?></td>
       <td><?php echo $ad_user->getAdFunctionId() ?></td>
       <td><?php echo $ad_user->getUnlockCode() ?></td>
+      <td><?php echo $ad_user->getToken() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

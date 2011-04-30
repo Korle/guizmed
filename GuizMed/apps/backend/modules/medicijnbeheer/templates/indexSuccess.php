@@ -1,3 +1,23 @@
+{
+    "allMedicines" : [
+    <?php $bol = true?>
+    <?php foreach ($med_forms as $med_form): ?>
+    <?php if($bol!=true){
+        echo ",";
+    }?>
+    <?php $bol=false ?>
+    {
+            "id" : "<?php echo $med_form->getMedFormId() ?>",
+            "name": "<?php echo $med_form->getMedBaseId() ?>"
+        }
+
+    <?php endforeach; ?>
+    ]
+}
+
+
+
+<!--
 <h1>Med forms List</h1>
 
 <table>
@@ -32,3 +52,4 @@
 </table>
 
   <a href="<?php echo url_for('medicijnbeheer/new') ?>">New</a>
+!>

@@ -13,11 +13,11 @@ abstract class BaseMedChemBondingFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'                => new sfWidgetFormFilterInput(),
+      'name'            => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'name'                => new sfValidatorPass(array('required' => false)),
+      'name'            => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('med_chem_bonding_filters[%s]');
@@ -37,8 +37,8 @@ abstract class BaseMedChemBondingFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'med_chem_bonding_id' => 'Number',
-      'name'                => 'Text',
+      'chem_bonding_id' => 'Number',
+      'name'            => 'Text',
     );
   }
 }
