@@ -5,8 +5,8 @@ CREATE TABLE ad_prescription (ad_presc_id INT AUTO_INCREMENT, start_date DATETIM
 CREATE TABLE ad_role (role_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL, PRIMARY KEY(role_id)) ENGINE = INNODB;
 CREATE TABLE ad_user (user_id INT AUTO_INCREMENT, fname VARCHAR(45) NOT NULL, lname VARCHAR(45) NOT NULL, email VARCHAR(80), uname VARCHAR(45) NOT NULL, passw VARCHAR(45) NOT NULL, phone VARCHAR(45), ad_role_id INT NOT NULL, ad_function_id INT NOT NULL, unlock_code VARCHAR(50), token VARCHAR(45), INDEX ad_role_id_idx (ad_role_id), INDEX ad_function_id_idx (ad_function_id), PRIMARY KEY(user_id)) ENGINE = INNODB;
 CREATE TABLE ad_user_patient (user_patient_id INT AUTO_INCREMENT, patient_id INT NOT NULL, user_id INT NOT NULL, prev_user_id INT, INDEX patient_id_idx (patient_id), INDEX user_id_idx (user_id), INDEX prev_user_id_idx (prev_user_id), PRIMARY KEY(user_patient_id)) ENGINE = INNODB;
-CREATE TABLE int_drug (int_drug_id INT, name VARCHAR(45) NOT NULL, minor_less_potent TINYINT, potent TINYINT, pro_drug TINYINT, substrate TINYINT, inhibitor TINYINT, inducer TINYINT, brand_id INT, enzym_id INT NOT NULL, enzym_subgroup_id INT, INDEX brand_id_idx (brand_id), INDEX enzym_id_idx (enzym_id), INDEX enzym_subgroup_id_idx (enzym_subgroup_id), PRIMARY KEY(int_drug_id)) ENGINE = INNODB;
-CREATE TABLE int_enzym (enzym_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL, PRIMARY KEY(enzym_id)) ENGINE = INNODB;
+CREATE TABLE int_drug (int_drug_id INT, name VARCHAR(45) NOT NULL, minor_less_potent TINYINT, potent TINYINT, pro_drug TINYINT, substrate TINYINT, inhibitor TINYINT, inducer TINYINT, brand_id INT, int_enzym_id INT NOT NULL, enzym_subgroup_id INT, INDEX brand_id_idx (brand_id), INDEX int_enzym_id_idx (int_enzym_id), INDEX enzym_subgroup_id_idx (enzym_subgroup_id), PRIMARY KEY(int_drug_id)) ENGINE = INNODB;
+CREATE TABLE int_enzym (int_enzym_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL, PRIMARY KEY(int_enzym_id)) ENGINE = INNODB;
 CREATE TABLE int_enzym_brand (int_brand_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL, PRIMARY KEY(int_brand_id)) ENGINE = INNODB;
 CREATE TABLE int_enzym_group (enzym_group_id INT AUTO_INCREMENT, name VARCHAR(45) NOT NULL, extra VARCHAR(45), PRIMARY KEY(enzym_group_id)) ENGINE = INNODB;
 CREATE TABLE int_enzym_subgroup (int_subgroup_id INT, name VARCHAR(45), PRIMARY KEY(int_subgroup_id)) ENGINE = INNODB;
@@ -32,14 +32,14 @@ ALTER TABLE ad_user ADD CONSTRAINT ad_user_ad_function_id_ad_function_function_i
 ALTER TABLE ad_user_patient ADD CONSTRAINT ad_user_patient_user_id_ad_user_user_id FOREIGN KEY (user_id) REFERENCES ad_user(user_id);
 ALTER TABLE ad_user_patient ADD CONSTRAINT ad_user_patient_prev_user_id_ad_user_user_id FOREIGN KEY (prev_user_id) REFERENCES ad_user(user_id);
 ALTER TABLE ad_user_patient ADD CONSTRAINT ad_user_patient_patient_id_ad_patient_patient_id FOREIGN KEY (patient_id) REFERENCES ad_patient(patient_id);
+ALTER TABLE int_drug ADD CONSTRAINT int_drug_int_enzym_id_int_enzym_int_enzym_id FOREIGN KEY (int_enzym_id) REFERENCES int_enzym(int_enzym_id);
 ALTER TABLE int_drug ADD CONSTRAINT int_drug_enzym_subgroup_id_int_enzym_subgroup_int_subgroup_id FOREIGN KEY (enzym_subgroup_id) REFERENCES int_enzym_subgroup(int_subgroup_id);
-ALTER TABLE int_drug ADD CONSTRAINT int_drug_enzym_id_int_enzym_enzym_id FOREIGN KEY (enzym_id) REFERENCES int_enzym(enzym_id);
 ALTER TABLE int_drug ADD CONSTRAINT int_drug_brand_id_int_enzym_brand_int_brand_id FOREIGN KEY (brand_id) REFERENCES int_enzym_brand(int_brand_id);
 ALTER TABLE int_interaction ADD CONSTRAINT int_interaction_med_form_id_med_form_med_form_id FOREIGN KEY (med_form_id) REFERENCES med_form(med_form_id);
 ALTER TABLE int_interaction ADD CONSTRAINT int_interaction_int_enzym_id_int_enzym_int_enzym_id FOREIGN KEY (int_enzym_id) REFERENCES int_enzym(int_enzym_id);
 ALTER TABLE int_interaction ADD CONSTRAINT int_interaction_enzym_group_id_int_enzym_group_enzym_group_id FOREIGN KEY (enzym_group_id) REFERENCES int_enzym_group(enzym_group_id);
 ALTER TABLE int_metabolism ADD CONSTRAINT int_metabolism_med_form_id_med_form_med_form_id FOREIGN KEY (med_form_id) REFERENCES med_form(med_form_id);
-ALTER TABLE int_metabolism ADD CONSTRAINT int_metabolism_enzym_group_id_int_enzym_enzym_id FOREIGN KEY (enzym_group_id) REFERENCES int_enzym(enzym_id);
+ALTER TABLE int_metabolism ADD CONSTRAINT int_metabolism_enzym_group_id_int_enzym_int_enzym_id FOREIGN KEY (enzym_group_id) REFERENCES int_enzym(int_enzym_id);
 ALTER TABLE med_base_id ADD CONSTRAINT med_base_id_med_type_id_med_type_med_type_id FOREIGN KEY (med_type_id) REFERENCES med_type(med_type_id);
 ALTER TABLE med_bnf_medicine ADD CONSTRAINT med_bnf_medicine_med_form_id_med_form_med_form_id FOREIGN KEY (med_form_id) REFERENCES med_form(med_form_id);
 ALTER TABLE med_bnf_medicine ADD CONSTRAINT mbmb FOREIGN KEY (bnf_percentage_id) REFERENCES med_bnf_percentage(bnf_percentage_id);

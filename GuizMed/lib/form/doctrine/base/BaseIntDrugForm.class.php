@@ -24,7 +24,7 @@ abstract class BaseIntDrugForm extends BaseFormDoctrine
       'inhibitor'         => new sfWidgetFormInputText(),
       'inducer'           => new sfWidgetFormInputText(),
       'brand_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzymBrand'), 'add_empty' => true)),
-      'enzym_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'), 'add_empty' => false)),
+      'int_enzym_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'), 'add_empty' => false)),
       'enzym_subgroup_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzymSubgroup'), 'add_empty' => true)),
     ));
 
@@ -38,7 +38,7 @@ abstract class BaseIntDrugForm extends BaseFormDoctrine
       'inhibitor'         => new sfValidatorInteger(array('required' => false)),
       'inducer'           => new sfValidatorInteger(array('required' => false)),
       'brand_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzymBrand'), 'required' => false)),
-      'enzym_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'))),
+      'int_enzym_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'))),
       'enzym_subgroup_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzymSubgroup'), 'required' => false)),
     ));
 

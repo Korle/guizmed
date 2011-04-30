@@ -1,0 +1,487 @@
+# data/fixtures/med_form_bonding.yml
+MedFormBonding:
+  med_formBonding1:
+     med_form_bonding_id: 1
+     med_form_id: 3
+     med_chem_bonding_id: 1
+     med_ki_val_id: 16
+  med_formBonding2:
+     med_form_bonding_id: 2
+     med_form_id: 3
+     med_chem_bonding_id: 2
+     med_ki_val_id: 16
+  med_formBonding3:
+     med_form_bonding_id: 3
+     med_form_id: 3
+     med_chem_bonding_id: 3
+     med_ki_val_id: 73
+  med_formBonding4:
+     med_form_bonding_id: 4
+     med_form_id: 3
+     med_chem_bonding_id: 4
+     med_ki_val_id: 32
+  med_formBonding5:
+     med_form_bonding_id: 5
+     med_form_id: 3
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding6:
+     med_form_bonding_id: 6
+     med_form_id: 3
+     med_chem_bonding_id: 7
+     med_ki_val_id: 40
+  med_formBonding7:
+     med_form_bonding_id: 7
+     med_form_id: 3
+     med_chem_bonding_id: 8
+     med_ki_val_id: 24
+  med_formBonding8:
+     med_form_bonding_id: 8
+     med_form_id: 3
+     med_chem_bonding_id: 9
+     med_ki_val_id: 40
+  med_formBonding9:
+     med_form_bonding_id: 9
+     med_form_id: 3
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding10:
+     med_form_bonding_id: 10
+     med_form_id: 6
+     med_chem_bonding_id: 1
+     med_ki_val_id: 73
+  med_formBonding11:
+     med_form_bonding_id: 11
+     med_form_id: 6
+     med_chem_bonding_id: 2
+     med_ki_val_id: 32
+  med_formBonding12:
+     med_form_bonding_id: 12
+     med_form_id: 6
+     med_chem_bonding_id: 3
+     med_ki_val_id: 73
+  med_formBonding13:
+     med_form_bonding_id: 13
+     med_form_id: 6
+     med_chem_bonding_id: 4
+     med_ki_val_id: 73
+  med_formBonding14:
+     med_form_bonding_id: 14
+     med_form_id: 6
+     med_chem_bonding_id: 6
+     med_ki_val_id: 16
+  med_formBonding15:
+     med_form_bonding_id: 15
+     med_form_id: 6
+     med_chem_bonding_id: 7
+     med_ki_val_id: 73
+  med_formBonding16:
+     med_form_bonding_id: 16
+     med_form_id: 6
+     med_chem_bonding_id: 8
+     med_ki_val_id: 73
+  med_formBonding17:
+     med_form_bonding_id: 17
+     med_form_id: 6
+     med_chem_bonding_id: 9
+     med_ki_val_id: 73
+  med_formBonding18:
+     med_form_bonding_id: 18
+     med_form_id: 6
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding19:
+     med_form_bonding_id: 19
+     med_form_id: 7
+     med_chem_bonding_id: 1
+     med_ki_val_id: 16
+  med_formBonding20:
+     med_form_bonding_id: 20
+     med_form_id: 7
+     med_chem_bonding_id: 2
+     med_ki_val_id: 16
+  med_formBonding21:
+     med_form_bonding_id: 21
+     med_form_id: 7
+     med_chem_bonding_id: 3
+     med_ki_val_id: 73
+  med_formBonding22:
+     med_form_bonding_id: 22
+     med_form_id: 7
+     med_chem_bonding_id: 4
+     med_ki_val_id: 32
+  med_formBonding23:
+     med_form_bonding_id: 23
+     med_form_id: 7
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding24:
+     med_form_bonding_id: 24
+     med_form_id: 7
+     med_chem_bonding_id: 7
+     med_ki_val_id: 40
+  med_formBonding25:
+     med_form_bonding_id: 25
+     med_form_id: 7
+     med_chem_bonding_id: 8
+     med_ki_val_id: 24
+  med_formBonding26:
+     med_form_bonding_id: 26
+     med_form_id: 7
+     med_chem_bonding_id: 9
+     med_ki_val_id: 40
+  med_formBonding27:
+     med_form_bonding_id: 27
+     med_form_id: 7
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding28:
+     med_form_bonding_id: 28
+     med_form_id: 9
+     med_chem_bonding_id: 1
+     med_ki_val_id: 24
+  med_formBonding29:
+     med_form_bonding_id: 29
+     med_form_id: 9
+     med_chem_bonding_id: 2
+     med_ki_val_id: 16
+  med_formBonding30:
+     med_form_bonding_id: 30
+     med_form_id: 9
+     med_chem_bonding_id: 3
+     med_ki_val_id: 24
+  med_formBonding31:
+     med_form_bonding_id: 31
+     med_form_id: 9
+     med_chem_bonding_id: 4
+     med_ki_val_id: 73
+  med_formBonding32:
+     med_form_bonding_id: 32
+     med_form_id: 9
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding33:
+     med_form_bonding_id: 33
+     med_form_id: 9
+     med_chem_bonding_id: 7
+     med_ki_val_id: 32
+  med_formBonding34:
+     med_form_bonding_id: 34
+     med_form_id: 9
+     med_chem_bonding_id: 8
+     med_ki_val_id: 32
+  med_formBonding35:
+     med_form_bonding_id: 35
+     med_form_id: 9
+     med_chem_bonding_id: 9
+     med_ki_val_id: 40
+  med_formBonding36:
+     med_form_bonding_id: 36
+     med_form_id: 9
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding37:
+     med_form_bonding_id: 37
+     med_form_id: 20
+     med_chem_bonding_id: 1
+     med_ki_val_id: 32
+  med_formBonding38:
+     med_form_bonding_id: 38
+     med_form_id: 20
+     med_chem_bonding_id: 2
+     med_ki_val_id: 16
+  med_formBonding39:
+     med_form_bonding_id: 39
+     med_form_id: 20
+     med_chem_bonding_id: 3
+     med_ki_val_id: 24
+  med_formBonding40:
+     med_form_bonding_id: 40
+     med_form_id: 20
+     med_chem_bonding_id: 4
+     med_ki_val_id: 32
+  med_formBonding41:
+     med_form_bonding_id: 41
+     med_form_id: 20
+     med_chem_bonding_id: 6
+     med_ki_val_id: 40
+  med_formBonding42:
+     med_form_bonding_id: 42
+     med_form_id: 20
+     med_chem_bonding_id: 7
+     med_ki_val_id: 48
+  med_formBonding43:
+     med_form_bonding_id: 43
+     med_form_id: 20
+     med_chem_bonding_id: 8
+     med_ki_val_id: 32
+  med_formBonding44:
+     med_form_bonding_id: 44
+     med_form_id: 20
+     med_chem_bonding_id: 9
+     med_ki_val_id: 48
+  med_formBonding45:
+     med_form_bonding_id: 45
+     med_form_id: 30
+     med_chem_bonding_id: 1
+     med_ki_val_id: 73
+  med_formBonding46:
+     med_form_bonding_id: 46
+     med_form_id: 30
+     med_chem_bonding_id: 2
+     med_ki_val_id: 9
+  med_formBonding47:
+     med_form_bonding_id: 47
+     med_form_id: 30
+     med_chem_bonding_id: 3
+     med_ki_val_id: 24
+  med_formBonding48:
+     med_form_bonding_id: 48
+     med_form_id: 30
+     med_chem_bonding_id: 4
+     med_ki_val_id: 32
+  med_formBonding49:
+     med_form_bonding_id: 49
+     med_form_id: 30
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding50:
+     med_form_bonding_id: 50
+     med_form_id: 30
+     med_chem_bonding_id: 7
+     med_ki_val_id: 48
+  med_formBonding51:
+     med_form_bonding_id: 51
+     med_form_id: 30
+     med_chem_bonding_id: 8
+     med_ki_val_id: 32
+  med_formBonding52:
+     med_form_bonding_id: 52
+     med_form_id: 30
+     med_chem_bonding_id: 9
+     med_ki_val_id: 73
+  med_formBonding53:
+     med_form_bonding_id: 53
+     med_form_id: 30
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding54:
+     med_form_bonding_id: 54
+     med_form_id: 31
+     med_chem_bonding_id: 1
+     med_ki_val_id: 32
+  med_formBonding55:
+     med_form_bonding_id: 55
+     med_form_id: 31
+     med_chem_bonding_id: 2
+     med_ki_val_id: 40
+  med_formBonding56:
+     med_form_bonding_id: 56
+     med_form_id: 31
+     med_chem_bonding_id: 3
+     med_ki_val_id: 40
+  med_formBonding57:
+     med_form_bonding_id: 57
+     med_form_id: 31
+     med_chem_bonding_id: 4
+     med_ki_val_id: 24
+  med_formBonding58:
+     med_form_bonding_id: 58
+     med_form_id: 31
+     med_chem_bonding_id: 6
+     med_ki_val_id: 24
+  med_formBonding59:
+     med_form_bonding_id: 59
+     med_form_id: 31
+     med_chem_bonding_id: 7
+     med_ki_val_id: 24
+  med_formBonding60:
+     med_form_bonding_id: 60
+     med_form_id: 31
+     med_chem_bonding_id: 8
+     med_ki_val_id: 40
+  med_formBonding61:
+     med_form_bonding_id: 61
+     med_form_id: 31
+     med_chem_bonding_id: 9
+     med_ki_val_id: 40
+  med_formBonding62:
+     med_form_bonding_id: 62
+     med_form_id: 31
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding63:
+     med_form_bonding_id: 63
+     med_form_id: 32
+     med_chem_bonding_id: 1
+     med_ki_val_id: 32
+  med_formBonding64:
+     med_form_bonding_id: 64
+     med_form_id: 32
+     med_chem_bonding_id: 2
+     med_ki_val_id: 32
+  med_formBonding65:
+     med_form_bonding_id: 65
+     med_form_id: 32
+     med_chem_bonding_id: 3
+     med_ki_val_id: 32
+  med_formBonding66:
+     med_form_bonding_id: 66
+     med_form_id: 32
+     med_chem_bonding_id: 4
+     med_ki_val_id: 32
+  med_formBonding67:
+     med_form_bonding_id: 67
+     med_form_id: 32
+     med_chem_bonding_id: 6
+     med_ki_val_id: 24
+  med_formBonding68:
+     med_form_bonding_id: 68
+     med_form_id: 32
+     med_chem_bonding_id: 7
+     med_ki_val_id: 24
+  med_formBonding69:
+     med_form_bonding_id: 69
+     med_form_id: 32
+     med_chem_bonding_id: 8
+     med_ki_val_id: 32
+  med_formBonding70:
+     med_form_bonding_id: 70
+     med_form_id: 32
+     med_chem_bonding_id: 9
+     med_ki_val_id: 40
+  med_formBonding71:
+     med_form_bonding_id: 71
+     med_form_id: 32
+     med_chem_bonding_id: 10
+     med_ki_val_id: 24
+  med_formBonding72:
+     med_form_bonding_id: 72
+     med_form_id: 33
+     med_chem_bonding_id: 1
+     med_ki_val_id: 40
+  med_formBonding73:
+     med_form_bonding_id: 73
+     med_form_id: 33
+     med_chem_bonding_id: 2
+     med_ki_val_id: 40
+  med_formBonding74:
+     med_form_bonding_id: 74
+     med_form_id: 33
+     med_chem_bonding_id: 3
+     med_ki_val_id: 40
+  med_formBonding75:
+     med_form_bonding_id: 75
+     med_form_id: 33
+     med_chem_bonding_id: 4
+     med_ki_val_id: 64
+  med_formBonding76:
+     med_form_bonding_id: 76
+     med_form_id: 33
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding77:
+     med_form_bonding_id: 77
+     med_form_id: 33
+     med_chem_bonding_id: 7
+     med_ki_val_id: 40
+  med_formBonding78:
+     med_form_bonding_id: 78
+     med_form_id: 33
+     med_chem_bonding_id: 8
+     med_ki_val_id: 24
+  med_formBonding79:
+     med_form_bonding_id: 79
+     med_form_id: 33
+     med_chem_bonding_id: 9
+     med_ki_val_id: 32
+  med_formBonding80:
+     med_form_bonding_id: 80
+     med_form_id: 34
+     med_chem_bonding_id: 1
+     med_ki_val_id: 32
+  med_formBonding81:
+     med_form_bonding_id: 81
+     med_form_id: 34
+     med_chem_bonding_id: 2
+     med_ki_val_id: 24
+  med_formBonding82:
+     med_form_bonding_id: 82
+     med_form_id: 34
+     med_chem_bonding_id: 3
+     med_ki_val_id: 32
+  med_formBonding83:
+     med_form_bonding_id: 83
+     med_form_id: 34
+     med_chem_bonding_id: 4
+     med_ki_val_id: 24
+  med_formBonding84:
+     med_form_bonding_id: 84
+     med_form_id: 34
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding85:
+     med_form_bonding_id: 85
+     med_form_id: 34
+     med_chem_bonding_id: 7
+     med_ki_val_id: 48
+  med_formBonding86:
+     med_form_bonding_id: 86
+     med_form_id: 34
+     med_chem_bonding_id: 8
+     med_ki_val_id: 24
+  med_formBonding87:
+     med_form_bonding_id: 87
+     med_form_id: 34
+     med_chem_bonding_id: 9
+     med_ki_val_id: 24
+  med_formBonding88:
+     med_form_bonding_id: 88
+     med_form_id: 34
+     med_chem_bonding_id: 10
+     med_ki_val_id: 16
+  med_formBonding89:
+     med_form_bonding_id: 89
+     med_form_id: 36
+     med_chem_bonding_id: 1
+     med_ki_val_id: 73
+  med_formBonding90:
+     med_form_bonding_id: 90
+     med_form_id: 36
+     med_chem_bonding_id: 2
+     med_ki_val_id: 24
+  med_formBonding91:
+     med_form_bonding_id: 91
+     med_form_id: 36
+     med_chem_bonding_id: 3
+     med_ki_val_id: 73
+  med_formBonding92:
+     med_form_bonding_id: 92
+     med_form_id: 36
+     med_chem_bonding_id: 4
+     med_ki_val_id: 73
+  med_formBonding93:
+     med_form_bonding_id: 93
+     med_form_id: 36
+     med_chem_bonding_id: 6
+     med_ki_val_id: 32
+  med_formBonding94:
+     med_form_bonding_id: 94
+     med_form_id: 36
+     med_chem_bonding_id: 7
+     med_ki_val_id: 48
+  med_formBonding95:
+     med_form_bonding_id: 95
+     med_form_id: 36
+     med_chem_bonding_id: 8
+     med_ki_val_id: 24
+  med_formBonding96:
+     med_form_bonding_id: 96
+     med_form_id: 36
+     med_chem_bonding_id: 9
+     med_ki_val_id: 32
+  med_formBonding97:
+     med_form_bonding_id: 97
+     med_form_id: 36
+     med_chem_bonding_id: 10
+     med_ki_val_id: 56

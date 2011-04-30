@@ -13,11 +13,11 @@ abstract class BaseIntEnzymFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'name'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'name'     => new sfValidatorPass(array('required' => false)),
+      'name'         => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('int_enzym_filters[%s]');
@@ -37,8 +37,8 @@ abstract class BaseIntEnzymFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'enzym_id' => 'Number',
-      'name'     => 'Text',
+      'int_enzym_id' => 'Number',
+      'name'         => 'Text',
     );
   }
 }

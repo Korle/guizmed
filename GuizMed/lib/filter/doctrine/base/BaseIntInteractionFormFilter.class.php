@@ -23,7 +23,7 @@ abstract class BaseIntInteractionFormFilter extends BaseFormFilterDoctrine
       'med_form_id'        => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedForm'), 'column' => 'med_form_id')),
       'enzym_group_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzymGroup'), 'column' => 'enzym_group_id')),
       'interaction_type'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'int_enzym_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'enzym_id')),
+      'int_enzym_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'int_enzym_id')),
     ));
 
     $this->widgetSchema->setNameFormat('int_interaction_filters[%s]');

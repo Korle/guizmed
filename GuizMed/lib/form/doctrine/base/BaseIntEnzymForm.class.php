@@ -15,13 +15,13 @@ abstract class BaseIntEnzymForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'enzym_id' => new sfWidgetFormInputHidden(),
-      'name'     => new sfWidgetFormInputText(),
+      'int_enzym_id' => new sfWidgetFormInputHidden(),
+      'name'         => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
-      'enzym_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('enzym_id')), 'empty_value' => $this->getObject()->get('enzym_id'), 'required' => false)),
-      'name'     => new sfValidatorString(array('max_length' => 45)),
+      'int_enzym_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('int_enzym_id')), 'empty_value' => $this->getObject()->get('int_enzym_id'), 'required' => false)),
+      'name'         => new sfValidatorString(array('max_length' => 45)),
     ));
 
     $this->widgetSchema->setNameFormat('int_enzym[%s]');

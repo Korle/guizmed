@@ -437,7 +437,7 @@ IntDrug:
       primary: false
       notnull: false
       autoincrement: false
-    enzym_id:
+    int_enzym_id:
       type: integer(4)
       fixed: false
       unsigned: false
@@ -457,8 +457,8 @@ IntDrug:
       foreign: int_brand_id
       type: one
     IntEnzym:
-      local: enzym_id
-      foreign: enzym_id
+      local: int_enzym_id
+      foreign: int_enzym_id
       type: one
     IntEnzymSubgroup:
       local: enzym_subgroup_id
@@ -468,11 +468,12 @@ IntEnzym:
   connection: doctrine
   tableName: int_enzym
   columns:
-    enzym_id:
+    int_enzym_id:
       type: integer(4)
       fixed: false
       unsigned: false
       primary: true
+      notnull: true
       autoincrement: true
     name:
       type: string(45)
@@ -483,11 +484,11 @@ IntEnzym:
       autoincrement: false
   relations:
     IntDrug:
-      local: enzym_id
-      foreign: enzym_id
+      local: int_enzym_id
+      foreign: int_enzym_id
       type: many
     IntMetabolism:
-      local: enzym_id
+      local: int_enzym_id
       foreign: enzym_group_id
       type: many
 IntEnzymBrand:
@@ -576,7 +577,7 @@ IntMetabolism:
       type: one
     IntEnzym:
       local: enzym_group_id
-      foreign: enzym_id
+      foreign: int_enzym_id
       type: one
 MedBaseId:
   connection: doctrine

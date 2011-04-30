@@ -16,7 +16,7 @@ Doctrine_Manager::getInstance()->bindComponent('IntDrug', 'doctrine');
  * @property integer $inhibitor
  * @property integer $inducer
  * @property integer $brand_id
- * @property integer $enzym_id
+ * @property integer $int_enzym_id
  * @property integer $enzym_subgroup_id
  * @property IntEnzymBrand $IntEnzymBrand
  * @property IntEnzym $IntEnzym
@@ -31,7 +31,7 @@ Doctrine_Manager::getInstance()->bindComponent('IntDrug', 'doctrine');
  * @method integer          getInhibitor()         Returns the current record's "inhibitor" value
  * @method integer          getInducer()           Returns the current record's "inducer" value
  * @method integer          getBrandId()           Returns the current record's "brand_id" value
- * @method integer          getEnzymId()           Returns the current record's "enzym_id" value
+ * @method integer          getIntEnzymId()        Returns the current record's "int_enzym_id" value
  * @method integer          getEnzymSubgroupId()   Returns the current record's "enzym_subgroup_id" value
  * @method IntEnzymBrand    getIntEnzymBrand()     Returns the current record's "IntEnzymBrand" value
  * @method IntEnzym         getIntEnzym()          Returns the current record's "IntEnzym" value
@@ -45,7 +45,7 @@ Doctrine_Manager::getInstance()->bindComponent('IntDrug', 'doctrine');
  * @method IntDrug          setInhibitor()         Sets the current record's "inhibitor" value
  * @method IntDrug          setInducer()           Sets the current record's "inducer" value
  * @method IntDrug          setBrandId()           Sets the current record's "brand_id" value
- * @method IntDrug          setEnzymId()           Sets the current record's "enzym_id" value
+ * @method IntDrug          setIntEnzymId()        Sets the current record's "int_enzym_id" value
  * @method IntDrug          setEnzymSubgroupId()   Sets the current record's "enzym_subgroup_id" value
  * @method IntDrug          setIntEnzymBrand()     Sets the current record's "IntEnzymBrand" value
  * @method IntDrug          setIntEnzym()          Sets the current record's "IntEnzym" value
@@ -141,7 +141,7 @@ abstract class BaseIntDrug extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('enzym_id', 'integer', 4, array(
+        $this->hasColumn('int_enzym_id', 'integer', 4, array(
              'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
@@ -169,8 +169,8 @@ abstract class BaseIntDrug extends sfDoctrineRecord
              'foreign' => 'int_brand_id'));
 
         $this->hasOne('IntEnzym', array(
-             'local' => 'enzym_id',
-             'foreign' => 'enzym_id'));
+             'local' => 'int_enzym_id',
+             'foreign' => 'int_enzym_id'));
 
         $this->hasOne('IntEnzymSubgroup', array(
              'local' => 'enzym_subgroup_id',

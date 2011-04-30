@@ -20,7 +20,7 @@ abstract class BaseIntMetabolismFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'med_form_id'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('MedForm'), 'column' => 'med_form_id')),
-      'enzym_group_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'enzym_id')),
+      'enzym_group_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'int_enzym_id')),
       'interaction_type'  => new sfValidatorChoice(array('required' => false, 'choices' => array('metabolism' => 'metabolism', 'inhibitor' => 'inhibitor', 'inducer' => 'inducer'))),
     ));
 

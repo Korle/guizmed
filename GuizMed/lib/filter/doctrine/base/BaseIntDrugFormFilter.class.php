@@ -21,7 +21,7 @@ abstract class BaseIntDrugFormFilter extends BaseFormFilterDoctrine
       'inhibitor'         => new sfWidgetFormFilterInput(),
       'inducer'           => new sfWidgetFormFilterInput(),
       'brand_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzymBrand'), 'add_empty' => true)),
-      'enzym_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'), 'add_empty' => true)),
+      'int_enzym_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzym'), 'add_empty' => true)),
       'enzym_subgroup_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('IntEnzymSubgroup'), 'add_empty' => true)),
     ));
 
@@ -34,7 +34,7 @@ abstract class BaseIntDrugFormFilter extends BaseFormFilterDoctrine
       'inhibitor'         => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'inducer'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'brand_id'          => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzymBrand'), 'column' => 'int_brand_id')),
-      'enzym_id'          => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'enzym_id')),
+      'int_enzym_id'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzym'), 'column' => 'int_enzym_id')),
       'enzym_subgroup_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('IntEnzymSubgroup'), 'column' => 'int_subgroup_id')),
     ));
 
@@ -64,7 +64,7 @@ abstract class BaseIntDrugFormFilter extends BaseFormFilterDoctrine
       'inhibitor'         => 'Number',
       'inducer'           => 'Number',
       'brand_id'          => 'ForeignKey',
-      'enzym_id'          => 'ForeignKey',
+      'int_enzym_id'      => 'ForeignKey',
       'enzym_subgroup_id' => 'ForeignKey',
     );
   }

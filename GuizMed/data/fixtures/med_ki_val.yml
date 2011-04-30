@@ -228,92 +228,92 @@ MedKiVal:
   med_ki_val46:
      med_ki_val_id: 46
      value: ---
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: -3
   med_ki_val47:
      med_ki_val_id: 47
      value: --
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: -2
   med_ki_val48:
      med_ki_val_id: 48
      value: -
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: -1
   med_ki_val49:
      med_ki_val_id: 49
      value: +/-
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: 0
   med_ki_val50:
      med_ki_val_id: 50
      value: +
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: 1
   med_ki_val51:
      med_ki_val_id: 51
      value: ++
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: 2
   med_ki_val52:
      med_ki_val_id: 52
      value: +++
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: 3
   med_ki_val53:
      med_ki_val_id: 53
      value: ++++
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: 4
   med_ki_val54:
      med_ki_val_id: 54
      value: +++++
-     tagval: 1000-10000
+     tagval: 1000-10.000
      influence: 5
   med_ki_val55:
      med_ki_val_id: 55
      value: ---
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: -3
   med_ki_val56:
      med_ki_val_id: 56
      value: --
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: -2
   med_ki_val57:
      med_ki_val_id: 57
      value: -
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: -1
   med_ki_val58:
      med_ki_val_id: 58
      value: +/-
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: 0
   med_ki_val59:
      med_ki_val_id: 59
      value: +
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: 1
   med_ki_val60:
      med_ki_val_id: 60
      value: ++
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: 2
   med_ki_val61:
      med_ki_val_id: 61
      value: +++
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: 3
   med_ki_val62:
      med_ki_val_id: 62
      value: ++++
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: 4
   med_ki_val63:
      med_ki_val_id: 63
      value: +++++
-     tagval: 10.000-100000
+     tagval: 10.000-100.000
      influence: 5
   med_ki_val64:
      med_ki_val_id: 64
@@ -355,13 +355,13 @@ MedKiVal:
      value: ++++
      tagval: >100.000
      influence: 4
-  med_ki_val73:
-    influence: 99
-    med_ki_val_id: 73
-    tagval: 
-    value: "?"
   med_ki_val72:
      med_ki_val_id: 72
      value: +++++
      tagval: >100.000
      influence: 5
+  med_ki_val73:
+     med_ki_val_id: 73
+     value: ?
+     tagval: 
+     influence: 

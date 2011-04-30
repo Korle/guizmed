@@ -89,6 +89,6 @@ abstract class BaseIntMetabolism extends sfDoctrineRecord
 
         $this->hasOne('IntEnzym', array(
              'local' => 'enzym_group_id',
-             'foreign' => 'enzym_id'));
+             'foreign' => 'int_enzym_id'));
     }
 }
